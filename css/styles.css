@@ -1,0 +1,173 @@
+/* #D68FD6 - light purple
+	#76E5FC - light blue
+	#352D39 - black coffee
+	##ffcba4 - peach
+	#7F2CCB - violet
+	#fff8f2 - almost white
+*/
+/*Global styles
+-----------------------------------------*/
+
+body {
+	font-family: 'Quicksand', sans-serif;
+ 	font-size: 15px;
+ 	margin: 0px;
+	padding: 0px;
+	font-weight: 100;
+ 	line-height: 1.25;
+ }
+
+ a {
+ 	color:  #3a0994;
+ }
+
+a:hover {
+	text-decoration: none;
+}
+h1 {
+	font-family:'Macondo', cursive;
+	font-weight: 50;
+	font-size: 45px;
+	margin:  0;
+}
+h2 {
+	font-family:'Macondo', cursive;
+	margin: 0;
+	font-weight: 25;
+	font-style: italic;
+	font-size: 25px;
+	line-height: 1.5;
+
+
+}
+h3 + p {
+	font-style: italic;
+
+
+}
+h3 ~ p {
+	margin: 0 0 0 30px;
+}
+h2 ~ p {
+	margin-left: 10px;
+}
+
+.divider > section{
+	border-bottom: 1px dashed #352D39;
+	padding: 25px 0;
+}
+.divider > section:last-of-type {
+ border-bottom: none;
+}
+h3 {
+	font-family:'Macondo', cursive;
+	margin: 0;
+	margin-left: 20px;
+	font-weight: 50;
+	font-size: 20px;
+	line-height: 1;
+}
+.content-wrap {
+	max-width:  800 px;
+	margin:  0 auto;
+	padding:  12px 0;
+	width: 85%;
+}
+
+.job-details {
+	margin-left:  20px;
+}
+
+/*Profile section
+------------------------------------------*/
+
+header {
+	background: #352D39;
+	color: #fff8f2;
+	text-align:  center;
+}
+header p {
+	text-align: center;
+	align-content: right;
+	
+}
+ul {
+	margin: 0;
+	text-align: left;
+}
+
+/*Projects section
+------------------------------------------*/
+.projects {
+	background: #D68FD6;
+
+}
+
+/*Work experience section
+------------------------------------------*/
+.work-experience {
+	background:  #cba4ff;
+}
+
+
+/*Education section
+------------------------------------------*/
+.education {
+	background: #7C90DB;
+}
+
+/*Contact section
+------------------------------------------*/
+footer {
+	background: #352D39;
+	color: #fff8f2;
+	text-align: center;
+}
+
+.contact-list {
+	list-style-type: none;
+	padding: 0;
+	
+}
+
+.contact-list a {
+	padding: 15px;
+	display: inline-block;
+	color: #7C90DB;
+}
+
+img {
+	width: 150px;
+	float: right;
+	border-radius: 700px
+}
+
+/* Responsive*/
+@media screen and (min-width: 900px) {
+ .job-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 10px;
+    padding: 0;
+	}
+	.contact-list {
+	display: flex;
+	justify-content: center;
+	}
+	h2 {
+		text-align: left;
+	}
+}
+@media screen and (max-width:749px){
+  h1 {
+    font-size: 75px;
+    line-height: 0.9;
+    margin-bottom: 20px;
+  }
+  h2 {
+    line-height: 1;
+  }
+  .contact-list a {
+    padding: 5px;
+  }
+}
