@@ -117,7 +117,7 @@ ul {
 /*Skills section
 ------------------------------------------*/
 .skills {
-	background: #ffd166
+	background: #ffd166;
 }
 /*Education section
 ------------------------------------------*/
@@ -161,12 +161,12 @@ img {
     column-gap: 10px;
     padding: 0;
 	}
-	.contact-list {
+.contact-list {
 	display: flex;
 	justify-content: center;
 	}
-	h2 {
-		text-align: left;
+h2 {
+text-align: left;
 	}
 .skills-list ul {
 	display: grid;
