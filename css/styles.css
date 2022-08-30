@@ -95,6 +95,9 @@ ul {
 	margin: 0;
 	text-align: left;
 }
+.header-title {
+	text-align: center
+}
 
 /*Projects section
 ------------------------------------------*/
