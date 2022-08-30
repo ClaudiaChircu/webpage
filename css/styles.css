@@ -95,7 +95,7 @@ ul {
 	margin: 0;
 	text-align: left;
 }
-.header-title {
+.header-title, .footer-contact {
 	text-align: center
 }
 
