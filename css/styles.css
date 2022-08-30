@@ -111,7 +111,9 @@ ul {
 
 /*Skills section
 ------------------------------------------*/
-
+.skills {
+	background: #ffd166
+}
 /*Education section
 ------------------------------------------*/
 .education {
