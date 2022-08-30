@@ -37,11 +37,11 @@ h2 {
 	font-style: italic;
 	font-size: 25px;
 	line-height: 1.5;
-.title-h2 {
-	text-align: center;
+.header-title {
+	text-align: center
 }
-.footer-h2 {
-	text-align: center;
+.footer-contact {
+	text-align: center
 }
 
 }
@@ -76,7 +76,7 @@ h3 {
 	max-width:  800 px;
 	margin:  0 auto;
 	padding:  12px 0;
-	width: 85%;
+	width: 75%;
 }
 
 .job-details {
@@ -147,7 +147,7 @@ footer {
 	color: #7C90DB;
 }
 
-image {
+img {
 	width: 150px;
 	float: right;
 	border-radius: 700px
@@ -185,7 +185,7 @@ image {
   .contact-list a {
     padding: 5px;
   }
-image {
+img {
 	width: 50px;
 	float: right;
 	border-radius: 700px
