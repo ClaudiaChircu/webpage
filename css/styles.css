@@ -71,7 +71,7 @@ h3 {
 	max-width:  800 px;
 	margin:  0 auto;
 	padding:  12px 0;
-	width: 75%;
+	width: 85%;
 }
 
 .job-details {
@@ -95,12 +95,6 @@ ul {
 	margin: 0;
 	text-align: left;
 }
-.header-title {
-	text-align: center
-}
-.footer-contact {
-	text-align: center
-}
 
 /*Projects section
 ------------------------------------------*/
@@ -115,12 +109,16 @@ ul {
 	background:  #cba4ff;
 }
 
+/*Skills section
+------------------------------------------*/
 
 /*Education section
 ------------------------------------------*/
 .education {
 	background: #7C90DB;
+
 }
+
 
 /*Contact section
 ------------------------------------------*/
@@ -142,7 +140,7 @@ footer {
 	color: #7C90DB;
 }
 
-.image {
+img {
 	width: 150px;
 	float: right;
 	border-radius: 700px
@@ -163,6 +161,10 @@ footer {
 	h2 {
 		text-align: left;
 	}
+.skills-list ul {
+	display: grid;
+  grid-template-columns: repeat(3, 3fr)
+}
 }
 @media screen and (max-width:749px){
   h1 {
@@ -176,4 +178,9 @@ footer {
   .contact-list a {
     padding: 5px;
   }
+img {
+	width: 50px;
+	float: right;
+	border-radius: 700px
+}
 }
