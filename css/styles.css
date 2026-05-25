@@ -122,6 +122,71 @@ ul {
 ------------------------------------------*/
 .skills {
 	background: #f4a261;
+	/* Skills Layout Elements */
+.skills-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.skills-title {
+    color: #fff8f2;
+    margin-bottom: 40px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.skills-grid {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+}
+
+/* Individual Category Cards */
+.skills-card {
+    flex: 1;
+    min-width: 260px;
+    background: #fff8f2;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skills-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.skills-card-title {
+    color: #f4a261;
+    margin-top: 0;
+    font-size: 20px;
+    border-bottom: 2px solid #f4a261;
+    padding-bottom: 8px;
+}
+
+.skills-badge-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+/* Individual Tool Badges */
+.skills-badge {
+    background: #f4a261;
+    color: #f4a261;
+    border: 1px solid #f4a261;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
 }
 /*Education section
 ------------------------------------------*/
