@@ -165,6 +165,7 @@ img {
 	width: 150px;
 	float: right;
 	border-radius: 700px;
+	 position: relative;
 }
 
 /* Responsive*/
@@ -203,5 +204,6 @@ img {
 	width: 80px;
 	float: right;
 	border-radius: 700px;
+	position: relative;
 }
-}
+
