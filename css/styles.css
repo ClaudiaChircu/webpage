@@ -129,12 +129,18 @@ ul {
 	background: #7C90DB;
 
 }
+/*Hobbies section
+------------------------------------------*/
+.hobbies {
+	background: #F4C430;
+
+}
 
 
 /*Contact section
 ------------------------------------------*/
 footer {
-	background: #352D39;
+	background: #AEE4B8;
 	color: #fff8f2;
 	text-align: center;
 }
