@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css\styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand" rel="stylesheet">
+</head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: 'Macondo', cursive;
+  color: 	#fff8f2;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #352D39;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color:#f1f1f1;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+  background-color: #352D39
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="projects.html">Projects</a>
+  <a href="#">Work Experience</a>
+  <a href="#">Education & Certifications</a>
+  <a href="#">Skills</a>
+  <a href="#">Hobbies</a>
+  <a href="#">Contact</a>
+  <a href="index.html">Home</a>
+</div>
+
+<div id="main">
+  
+  <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; Explore Portfolio</span>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+ <section class="projects" style="background-color:  #cba4ff; min-height: 100vh; margin: 0;">
+<!-- ***********************  WORK EXPERIENCE  *********************** -->
+      <section class="work-experience">
+       <div class="content-wrap item-details divider">
+        <h2>Work Experience</h2>
+        <p style="margin-top: 0" "margin-bottom: 0">Experienced on customer support, good understanding of technical processes, concepts and methodolgies with a fine touch of empathy.</p>
+
+        <!-- Most recent Job -->
+        <section class="job-item">
+          <div class="job-details">
+          <h3>Technical Writer @ _VOIS (Vodafone Intelligent Solutions)</h3>
+          <p>June 2021 - Present</p>
+        </div>
+        <div class="job-summary">
+          <ul>
+            <li>I create documentation for our customers, like User Guides, Quick Reference Guides to ensure a good procedural understanding of the product’s functionalities.
+            <li>I update the documentation when a new version of the product is released.</li>
+            <li>I use specific tools to edit and build the documentation, like: MadCap Software, Word, PowerPoint.</li>
+            <li>I create and maintain the quality of the documentation in accordance to internal standards and requirements.</li>
+            <li>I involve in promoting the visibility across _VOIS by creating and updating SharePoint pages and widgets for the department's monthly newsletter.</li>
+          </ul>
+        </div>
+        </section>
+        <br />
+        <!-- Previous Jobs -->
+        <section class="job-item">
+          <div class="job-details">
+          <h3>Accounts Payable Business Support Services L1 @ Connections Romania for Procter & Gamble</h3>
+          <p>July 2020 - June 2021</p>
+       </div>
+       <div class="job-summary">
+          <ul>
+            <li> As a Regional Administrator for an internal Accounts Payable application, I provide access to the users and escalate their issues to L2 for investigation.</li>
+            <li>I maintain databases in internal programs to ensure the information is displayed correctly for P2P daily tasks.</li>
+            <li>I perform manual testing for different Agile projects in the UAT phase - Regression testing (NNIT) to determine if other components have been affected by the new release.</li>
+            <li>I offer technical support for P2P Ops teams (FI approval workflow) in accordance to internal policies and processes.</li>
+            <li>I monitor the Electronic invoicing Dashboard to identify and proactively act to solve issues that prevent invoices to be processed in SAP.</li>
+            <li>I provide resolutions for invoice issues based on root cause analysis & escalate them to Front Office agents.</li>
+            <li>I investigate and document unknown errors & collaborate with 3rd party support teams in order to clarify the error code and avoid deadlocks.</li>
+          </ul>
+        </div>
+        </section>
+         <br />
+        <section class="job-item">
+          <div class="job-details">
+          <h3>Global Technical Support @ Connections Romania for Procter & Gamble</h3>
+          <p>October 2019 - June 2020</p>
+        </div>
+        <div class="job-summary">
+          <ul>
+            <li>As part of Technical Support Global Team, I solved most common issues in ServiceNow platform, according to the SLA agreements.</li>
+            <li>For more complex issues, I raised bugs to L2/L3 in JIRA for resolution.</li>
+            <li>Report and analyze completed work for business management review.</li>
+            <li>Created requests for a 3rd party in order to update the information on the company’s pages and portals.</li>
+            <li>I created & updated documentation for applications to ease navigation of the suppliers and internal users.</li>
+            <Li>I helped with a smooth transition when a new team took over the technical support role.</Li>
+          </ul>
+        </div>
+        </section>
+         <br />
+        <section class="job-item">
+          <div class="job-details">
+          <h3>Vendor Master Data Analyst @ Connections Romania for Procter & Gamble</h3>
+          <p>October 2018 - September 2019</p>
+        </div>
+        <div class="job-summary">
+           <ul>
+            <li>I ran daily reports for blocked invoices, providing analysis on block reason.</li>
+            <li>I performed SAP investigation about Vendor's details - 3 way-match.</li>
+            <li>I raises tickets in Aravo Third-Party Risk Management for Vendor Master Data updates.</li>
+            <Li>I submitted incidents in Service Now Ticketing Tool for technical issues related to Aravo-SAP data flow or other technical errors.</li>
+            <Li>I ensured that Vendor Master Data issues are solved in a timely manner in order to avoid invoices to become overdue.</li>
+            <Li>I assisted Suppliers on the Vendor Master Data process and provide help for any issues they encounter.</li>
+            <Li>I performed SAP investigation for PO’s and goods receipts in order to troubleshoot the blocked invoices.</li>
+            <Li>I contacted support teams and follow-up on issues to solve the processes in time.</li>
+          </ul>
+           </div>
+        </section>
+      </div>
+    </section>
+        <!-- End of Job block. -->
