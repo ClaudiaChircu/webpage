@@ -143,6 +143,8 @@ footer {
 	background: #AEE4B8;
 	color: #fff8f2;
 	text-align: center;
+	min-height: 100vh;
+	margin: 0;
 }
 
 .contact-list {
