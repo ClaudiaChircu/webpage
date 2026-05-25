@@ -175,7 +175,7 @@ text-align: left;
 }
 @media screen and (max-width:749px){
   h1 {
-    font-size: 75px;
+    font-size: 45px;
     line-height: 0.9;
     margin-bottom: 20px;
   }
