@@ -1,122 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css\styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Quicksand" rel="stylesheet">
-     <title>Projects | Claudia Chircu</title>
-</head>
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: 'Macondo', cursive;
-  color: 	#fff8f2;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Claudia Chircu</title>
+  
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://googleapis.com" rel="stylesheet">
 
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #352D39;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
+  <style>
+    @import url('https://cdnfonts.com');
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color:#f1f1f1;
-  display: block;
-  transition: 0.3s;
-}
+    /* --- GLOWING JEDI PROJECTS THEME --- */
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      color: #E2E8F0;            /* Crisp Durasteel Gray */
+      background-color: #0D111A;   /* Deep Space Navy */
+      margin: 0;
+      padding: 0;
+    }
 
-.sidenav a:hover {
-  color: #f1f1f1;
-}
+    /* Side Navigation Drawer */
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 100;            
+      top: 0;
+      left: 0;
+      background-color: #161F30;   /* Starship Control Panel dark blue */
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      border-right: 1px solid rgba(0, 210, 255, 0.3); /* Laser fence border */
+    }
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
+    .sidenav a {
+      padding: 12px 8px 12px 32px;
+      text-decoration: none;
+      font-size: 18px;
+      font-family: 'Share Tech Mono', monospace;
+      color: #E2E8F0;
+      display: block;
+      transition: 0.3s;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
 
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-  background-color: #352D39
-}
+    /* Green lightsaber glow on hover */
+    .sidenav a:hover {
+      color: #39FF14; 
+      text-shadow: 0 0 8px #39FF14;
+      padding-left: 40px;
+    }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    /* Base Navigation Trigger Wrapper */
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;
+      background-color: #0D111A;
+    }
+
+    .menu-trigger {
+      font-family: 'Star Jedi', sans-serif;
+      font-size: 22px;
+      cursor: pointer;
+      color: #00D2FF;             /* Skywalker Blue trigger */
+      text-shadow: 0 0 8px #00D2FF;
+      letter-spacing: 1px;
+    }
+
+    /* Custom Galactic Project Holocron Panels */
+    .jedi-project-card {
+      background-color: #161F30;
+      border: 1px solid rgba(0, 210, 255, 0.2);
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 35px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .jedi-project-card:hover {
+      border-color: #00D2FF;
+      box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+    }
+
+    .jedi-project-card h3 {
+      font-family: 'Star Jedi', sans-serif;
+      color: #39FF14;             /* Yoda Green highlights for project titles */
+      text-shadow: 0 0 5px #39FF14;
+      font-size: 16px;
+      font-weight: normal;
+      margin-top: 0;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .jedi-project-card p {
+      font-size: 16px;
+      color: #E2E8F0;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .project-type-tag {
+      display: inline-block;
+      font-size: 12px;
+      color: #00D2FF;
+      text-shadow: 0 0 3px rgba(0, 210, 255, 0.5);
+      border: 1px solid rgba(0, 210, 255, 0.3);
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+  </style>
 </head>
 <body>
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <!-- Side Navigation Drawer Element -->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="home.html">Home</a>
-  <a href="projects.html">Projects</a>
-  <a href="work_experience.html">Work Experience</a>
-  <a href="education.html">Education & Certifications</a>
-  <a href="skills.html">Skills</a>
-  <a href="hobbies.html">Hobbies</a>
-  <a href="contact.html">Contact</a>
+    <a href="projects.html">Projects</a>
+    <a href="work_experience.html">Work Experience</a>
+    <a href="education.html">Education & Certifications</a>
+    <a href="skills.html">Skills</a>
+    <a href="hobbies.html">Hobbies</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
-</div>
+  <!-- Main View Area Workspace -->
+  <div id="main">
+    <span class="menu-trigger" onclick="openNav()">☰ Explore Portfolio</span>
+    
+    <!-- Central Content Area -->
+    <main class="content-wrap" style="padding-top: 40px; padding-bottom: 40px;">
+      
+      <h2 style="font-family: 'Star Jedi', sans-serif; font-weight: normal; color: #ffffff; text-shadow: 0 0 8px #00D2FF, 0 0 15px #00D2FF; text-align: center; margin-bottom: 40px; font-size: 28px; letter-spacing: 1px;">
+        Data Holocrons
+      </h2>
 
-<div id="main">
-  
-  <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; Explore Portfolio</span>
-</div>
+      <!-- PROJECT 1: NETWORKING -->
+      <div class="jedi-project-card">
+        <div class="project-type-tag">Core Infrastructure</div>
+        <h3>Networking</h3>
+        <p>
+          Networking projects aim to offer efficient, secure, and application-optimized software-defined networks with integrated virtual functions that remain highly responsive to real-time demands of cloud services and digitization frameworks. These projects helped me build a deeper architectural understanding of modern networking solutions and take my expertise to the next stage through active hands-on experience across multiple deployment portals.
+        </p>
+      </div>
 
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
+      <!-- PROJECT 2: MOBILE AND DATA SOLUTION -->
+      <div class="jedi-project-card">
+        <div class="project-type-tag">Enterprise Mobility</div>
+        <h3>Mobile and Data Solution</h3>
+        <p>
+          The Mobile and Data solutions provide corporate networks and workforce fleets flexible remote options, managing cellular bundles and hardware assets. While serving as a technical communicator on this initiative, I mastered compiling and delivering diverse outputs utilizing MadCap Flare, PowerPoint, Camtasia, and ServiceNow instances. This directly verified that target users maintain access to precise operational guidelines, effectively reducing down-ticket helpdesk logs.
+        </p>
+      </div>
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
-</script>
- <section class="projects" style="background-color: #D68FD6; min-height: 100vh; margin: 0;">
-        <div class="content-wrap">
-          <h2>Projects</h2>
-            <!-- Project block. -->
-              <section>
-                <h3>Networking</h3>
-                    <p>Networking projects aim to offer efficient, secure and application optimized software-defined network with integrated virtual functions that will be responsive to real-time demands of cloud services and digitization. These projects helped me to have a better understanding of the networking solutions and take my knowledge to the next level, having a hands-on experience using different portals.</p>
-         <br />
-                <h3>Mobile and Data solution</h3>
-                    <p>The Mobile and Data solutions provide companies and employees flexible working options, like bundles and devices. While working as a technical writer on this project, I learned to create and deliver multiple outputs using MadCap Flare, PowerPoint, Camtasia and ServiceNow to ensure the customers have all the necessary information and reduce the number of tickets received by Helpdesk.</p>
-              </section>
-                <br />
-          <section>
-                <h3>Internet of Things</h3>
-                    <p>Internet of Things (IoT) solutions connect physical devices and assets to a global network, enabling businesses to gather real-time data, automate processes, and drive smart automation. While working on this project, I documented complex machine-to-machine (M2M) architectures and regulatory setup frameworks. This refined my ability to translate technical telemetry, data-routing protocols, and global subscription portals into clear, structured user guides.</p>
-         <br />
-               
-   
-                <section>
-         
-          <h3 style="border-top: dashed 1px #352D39; padding-top: 10px;">Personal Projects</h3>
-          <p>Outside of work, you’ll usually find me on the move. I love running in the park, both to train for local competitions and to ensure I have the energy to keep up with my little one at home. For me, running is more than just fitness—it is a way to give back. I use my races as opportunities to raise funds and awareness for healthcare causes and NGOs that are incredibly close to my heart, such as HOSPICE Casa Speranței and Fundația Renașterea. Combining my passion for running with supporting cancer research and pediatric health gives every mile a deeper purpose. </p> 
-            </section>
-        </div>
-      </section>
-        
- <!-- End of Project block. -->
+      <!-- PROJECT 3: INTERNET OF THINGS -->
+      <div class="jedi-project-card">
+        <div class="project-type-tag">Automotive IoT / IITC</div>
+        <h3>Internet of Things</h3>
+        <p>
+          Internet of Things (IoT) platforms connect endpoint hardware components and remote assets to a unified global data grid, allowing enterprises to harvest real-time telemetry metrics, automate complex workflows, and deploy smart processing frameworks. While working on this system layer, I documented intricate machine-to-machine (M2M) structures and global compliance frameworks. This refined my capacity to translate raw network data-routing protocols and provisioning portals into structured, highly accessible documentation guides.
+        </p>
+      </div>
+
+      <!-- PROJECT 4: PERSONAL PROJECTS -->
+      <div class="jedi-project-card" style="border-color: #39FF14; box-shadow: 0 0 15px rgba(57, 255, 20, 0.15);">
+        <div class="project-type-tag" style="color: #39FF14; border-color: rgba(57, 255, 20, 0.3); text-shadow: 0 0 3px rgba(57, 255, 20, 0.5);">Community Outreach</div>
+        <h3 style="color: #39FF14; text-shadow: 0 0 5px #39FF14;">Personal Projects</h3>
+        <p>
+          Outside of professional engineering timelines, I focus heavily on physical endurance and social optimization. I regularly train for regional racing circuits, which keeps me balanced and ensures I maintain the energy required to keep up with my little one at home. For me, distance running is a vehicle for social stewardship. I actively transform my athletic milestones into fundraising operations to generate vital resources and awareness for healthcare causes and non-profit entities close to my heart, such as <b>HOSPICE Casa Speranței</b> and <b>Fundația Renașterea</b>. Linking my athletic passion to cancer research and pediatric health funding ensures that every mile logged advances a deeper universal purpose.
+        </p>
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+  </script>
+
+</body>
+</html>
