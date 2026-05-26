@@ -1,138 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css\styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Quicksand" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Claudia Chircu</title>
+  
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://googleapis.com" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-     <title>Contact | Claudia Chircu</title>
-</head>
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: 'Macondo', cursive;
-  color: 	#fff8f2;
-}
+  <style>
+    @import url('https://cdnfonts.com');
 
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #352D39;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
+    /* --- GLOWING JEDI STYLES --- */
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      color: #E2E8F0;            /* Crisp Durasteel Gray */
+      background-color: #0D111A;   /* Deep Space Navy Background */
+      margin: 0;
+      padding: 0;
+    }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color:#f1f1f1;
-  display: block;
-  transition: 0.3s;
-}
+    /* Side Navigation Drawer Box */
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 100;            
+      top: 0;
+      left: 0;
+      background-color: #161F30;   /* Starship Control Panel dark blue */
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      border-right: 1px solid rgba(0, 210, 255, 0.3); /* Blue laser border */
+    }
 
-.sidenav a:hover {
-  color: #f1f1f1;
-}
+    .sidenav a {
+      padding: 12px 8px 12px 32px;
+      text-decoration: none;
+      font-size: 18px;
+      font-family: 'Share Tech Mono', monospace;
+      color: #E2E8F0;
+      display: block;
+      transition: 0.3s;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
+    /* Ignite links with a green neon lightsaber glow on hover */
+    .sidenav a:hover {
+      color: #39FF14; 
+      text-shadow: 0 0 8px #39FF14;
+      padding-left: 40px;
+    }
 
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-  background-color: #352D39
-}
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
+    /* Base Menu Trigger Shell */
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;
+      background-color: #0D111A;
+    }
+
+    .menu-trigger {
+      font-family: 'Star Jedi', sans-serif;
+      font-size: 22px;
+      cursor: pointer;
+      color: #00D2FF;             /* Skywalker Blue trigger button */
+      text-shadow: 0 0 8px #00D2FF;
+      letter-spacing: 1px;
+    }
+
+    /* Form Container Component styling */
+    .jedi-form-box {
+      width: 100%; 
+      max-width: 400px; 
+      background: #161F30;        /* Card dark container panels */
+      padding: 35px 30px; 
+      border-radius: 16px; 
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4); 
+      box-sizing: border-box;
+      border: 1px solid rgba(0, 210, 255, 0.2);
+    }
+
+    .jedi-input {
+      width: 100%; 
+      padding: 12px; 
+      border: 1px solid rgba(0, 210, 255, 0.4); 
+      background: #0D111A; 
+      color: #ffffff; 
+      border-radius: 8px; 
+      box-sizing: border-box;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .jedi-input:focus {
+      border-color: #00D2FF;
+      box-shadow: 0 0 8px rgba(0, 210, 255, 0.5);
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 14px;}
+    }
+  </style>
 </head>
 <body>
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <!-- Side Navigation Drawer Element -->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="home.html">Home</a>
-  <a href="projects.html">Projects</a>
-  <a href="work_experience.html">Work Experience</a>
-  <a href="education.html">Education & Certifications</a>
-  <a href="skills.html">Skills</a>
-  <a href="hobbies.html">Hobbies</a>
-  <a href="contact.html">Contact</a>
+    <a href="projects.html">Projects</a>
+    <a href="work_experience.html">Work Experience</a>
+    <a href="education.html">Education & Certifications</a>
+    <a href="skills.html">Skills</a>
+    <a href="hobbies.html">Hobbies</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
-</div>
-
-<div id="main">
-  
-  <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; Explore Portfolio</span>
-</div>
-
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
-</script>
-
-        <!-- *****************  CONTACT INFO / SOCIAL MEDIA  ***************** -->
-      <footer style="background-color: #AEE4B8; min-height: 100vh; margin: 0; >
-         <div class="content-wrap">
-    <h2 class="footer-contact" style="text-align: center; color: #352D39;">Let's Keep in Touch!</h2>
-        <!-- Social media and contact links. -->
-        <ul class="contact-list">
-<!-- Add icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!-- Add font awesome icons -->
-<a href="https://www.linkedin.com/in/claudia-c-712220174/" class="fa fa-linkedin"></a></a>
-<a href="https://www.instagram.com/clau.ch27/" class="fa fa-instagram"></a>
-<a href="https://claudiach13.wordpress.com/" target="_blank" class="fa fa-wordpress"></a>
-        </ul>
-       </div>
-         <footer>
-           <div style=" background:  #AEE4B8; padding: 30px; min-height: 100vh; margin: 0;">
-  <h3 style="color: #352D39; margin-top: 0; font-size: 22px;">Send a Message</h3>
-  
-  <form action="https://formspree.io/f/mojbkvnw" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
-    <div>
-      <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #352D39;">Name</label>
-      <input type="text" name="name" required style="width: 100%; padding: 10px; border: 1px solid #AEE4B8; border-radius: 8px; box-sizing: border-box;">
-    </div>
+  <!-- Main View Area Workspace -->
+  <div id="main">
+    <span class="menu-trigger" onclick="openNav()">☰ Explore Portfolio</span>
     
-    <div>
-      <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #352D39;">Email</label>
-      <input type="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #AEE4B8; border-radius: 8px; box-sizing: border-box;">
-    </div>
-    
-    <div>
-      <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #352D39;">Message</label>
-      <textarea name="message" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #AEE4B8; border-radius: 8px; box-sizing: border-box; resize: vertical;"></textarea>
-    </div>
-    
-    <button type="submit" style="background: #352D39;  font-family: 'Macondo', cursive;color: white; border: none; padding: 12px; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background 0.2s;">
-      Send Message
-    </button>
-  </form>
-</div>
+    <main style="display: flex; flex-direction: column; align-items: center; padding: 40px 20px; box-sizing: border-box;">
+      
+      <!-- Headline stylized with Skywalker Blue neon text treatments -->
+      <h2 style="font-family: 'Star Jedi', sans-serif; font-weight: normal; color: #ffffff; text-shadow: 0 0 8px #00D2FF, 0 0 15px #00D2FF; text-align: center; margin-bottom: 30px; letter-spacing: 1px;">
+        Let's Keep in Touch!
+      </h2>
+
+      <!-- Clean Icon Row layout container (Stripped out the <ul> bullet constraints) -->
+      <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; width: 100%;">
+        <a href="https://www.linkedin.com/in/claudia-c-712220174/" target="_blank" class="fa fa-linkedin"></a>
+        <a href="https://www.instagram.com/clau.ch27/" target="_blank" class="fa fa-instagram"></a>
+        <a href="https://claudiach13.wordpress.com/" target="_blank" class="fa fa-wordpress"></a>
+      </div>
+
+      <!-- Compact transmission message layout card box block -->
+      <div class="jedi-form-box">
+        <h3 style="font-family: 'Star Jedi', sans-serif; font-weight: normal; color: #39FF14; text-shadow: 0 0 5px #39FF14; margin-top: 0; margin-bottom: 25px; font-size: 16px; text-align: center; letter-spacing: 1px;">
+          Send a Message
+        </h3>
+        
+        <form action="https://formspree.io/f/mojbkvnw" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+          
+          <!-- Name Terminal Field -->
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <label style="font-weight: bold; color: #00D2FF; font-size: 14px; letter-spacing: 0.5px;">NAME</label>
+            <input type="text" name="name" required placeholder="Enter designation..." class="jedi-input">
+          </div>
+          
+          <!-- Email Terminal Field -->
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <label style="font-weight: bold; color: #00D2FF; font-size: 14px; letter-spacing: 0.5px;">EMAIL</label>
+            <input type="email" name="email" required placeholder="comms.channel@domain..." class="jedi-input">
+          </div>
+          
+          <!-- Message Terminal Field -->
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <label style="font-weight: bold; color: #00D2FF; font-size: 14px; letter-spacing: 0.5px;">MESSAGE</label>
+            <textarea name="message" rows="5" required placeholder="Type holocron packet data here..." class="jedi-input" style="resize: vertical;"></textarea>
+          </div>
+          
+          <!-- Transmission Activation Button stylized with Yoda Neon Green glow treatments -->
+          <button type="submit" style="background: transparent; font-family: 'Star Jedi', sans-serif; font-weight: normal; color: #ffffff; border: 2px solid #39FF14; padding: 14px; border-radius: 30px; font-size: 14px; cursor: pointer; transition: all 0.3s; margin-top: 10px; width: 100%; text-shadow: 0 0 4px #39FF14; box-shadow: 0 0 10px rgba(57, 255, 20, 0.2); letter-spacing: 1px;">
+            Transmit Message
+          </button>
+        </form>
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+  </script>
+
+</body>
+</html>
