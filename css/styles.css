@@ -1,45 +1,61 @@
-/* #D68FD6 - light purple
-	#76E5FC - light blue
-	#352D39 - black coffee
-	##ffcba4 - peach
-	#7F2CCB - violet
-	#fff8f2 - almost white
-*/
+/* --- GLOWING JEDI THEME SYSTEM --- */
+@import url('https://cdnfonts.com');
+@import url('https://googleapis.com');
+
+:root {
+	--jedi-bg: #0D111A;         /* Deep Space Navy */
+	--jedi-panel: #161F30;      /* Starship Control Panel */
+	--jedi-text: #E2E8F0;       /* Durasteel Gray */
+	--jedi-blue-glow: #00D2FF;  /* Skywalker Lightsaber Blue */
+	--jedi-green-glow: #39FF14; /* Yoda Lightsaber Green */
+}
+
 /*Global styles
 -----------------------------------------*/
-
 body {
-	font-family: 'Quicksand', sans-serif;
- 	font-size: 15px;
- 	margin: 0px;
+	font-family: 'Share Tech Mono', monospace;
+	font-size: 16px;
+	margin: 0px;
 	padding: 0px;
-	font-weight: 100;
- 	line-height: 1.25;
- }
+	font-weight: normal;
+	line-height: 1.6;
+	background-color: var(--jedi-bg);
+	color: var(--jedi-text);
+	letter-spacing: 0.5px;
+}
 
- a {
- 	color:  #3a0994;
- }
+a {
+	color: var(--jedi-blue-glow);
+	transition: color 0.2s ease, text-shadow 0.2s ease;
+}
 
 a:hover {
 	text-decoration: none;
+	color: var(--jedi-green-glow);
+	text-shadow: 0 0 8px var(--jedi-green-glow);
 }
 
 h1 {
-	font-family:'Macondo', cursive;
-	font-weight: 25;
-	font-size: 45px;
-	margin:  0;
+	font-family: 'Star Jedi', sans-serif;
+	font-weight: normal;
+	font-size: 42px;
+	margin: 0;
+	color: #ffffff;
+	text-shadow: 0 0 8px var(--jedi-blue-glow), 0 0 15px var(--jedi-blue-glow);
+	letter-spacing: 2px;
 }
 
 h2 {
-	font-family:'Macondo', cursive;
+	font-family: 'Star Jedi', sans-serif;
 	margin: 0;
-	font-weight: 25;
-	font-style: italic;
-	font-size: 25px;
+	font-weight: normal;
+	font-size: 20px;
 	line-height: 1.5;
+	color: var(--jedi-green-glow);
+	text-shadow: 0 0 5px var(--jedi-green-glow);
+	letter-spacing: 1px;
 }
+
 .header-title {
 	text-align: center;
 }
@@ -50,6 +66,7 @@ h2 {
 
 h3 + p {
 	font-style: italic;
+	color: #ffffff;
 }
 
 h3 ~ p {
@@ -61,45 +78,50 @@ h2 ~ p {
 }
 
 .divider > section {
-	border-bottom: 1px dashed #352D39;
+	border-bottom: 1px dashed rgba(0, 210, 255, 0.2);
 	padding: 25px 0;
 }
 
 .divider > section:last-of-type {
- border-bottom: none;
+	border-bottom: none;
 }
 
 h3 {
-	font-family:'Macondo', cursive;
+	font-family: 'Star Jedi', sans-serif;
 	margin: 0;
 	margin-left: 20px;
-	font-weight: 50;
-	font-size: 20px;
-	line-height: 1;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 1.2;
+	color: #ffffff;
+	text-shadow: 0 0 4px var(--jedi-blue-glow);
+	letter-spacing: 1px;
 }
 
 .content-wrap {
-	max-width:  800 px;
-	margin:  0 auto;
-	padding:  12px 0;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 12px 0;
 	width: 75%;
 }
 
 .job-details {
-	margin-left:  20px;
+	margin-left: 20px;
 }
 
 /*Profile section
 ------------------------------------------*/
-
 header {
-	background: #352D39;
-	color: #fff8f2;
-	text-align:  center;
+	background: var(--jedi-panel);
+	color: var(--jedi-text);
+	text-align: center;
+	padding: 40px 0;
+	border-bottom: 2px solid var(--jedi-blue-glow);
+	box-shadow: 0 4px 20px rgba(0, 210, 255, 0.15);
 }
+
 header p {
 	text-align: center;
-	align-content: right;
 }
 
 ul {
@@ -107,144 +129,121 @@ ul {
 	text-align: left;
 }
 
-/*Projects section
-------------------------------------------*/
-.projects {
-	background: #D68FD6;
+/* Unified Section Background Colors */
+.projects, 
+.work-experience, 
+.skills, 
+.education, 
+.hobbies {
+	background: var(--jedi-bg);
 	min-height: 100vh;
 	margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
+	padding: 40px 0;
+	box-sizing: border-box;
 }
-
-/*Work experience section
-------------------------------------------*/
-.work-experience {
-	background:  #cba4ff;
-}
-
-/*Skills section
-------------------------------------------*/
-.skills {
-	background: #f4a261;
-}
-
-/*Education section
-------------------------------------------*/
-.education {
-	background: #7C90DB;
-}
-
-/*Hobbies section
-------------------------------------------*/
-.hobbies {
-	background: #009776;
-}
-
 
 /*Contact section
 ------------------------------------------*/
 footer {
-	background: #AEE4B8;
-	color: #fff8f2;
+	background: var(--jedi-panel);
+	color: var(--jedi-text);
 	text-align: center;
 	min-height: 100vh;
 	margin: 0;
+	padding-top: 40px;
+	border-top: 2px solid var(--jedi-blue-glow);
 }
 
 .contact-list {
 	list-style-type: none;
 	padding: 0;
-	
 }
 
 .contact-list a {
 	padding: 15px;
 	display: inline-block;
-	color: #7C90DB;
+	color: var(--jedi-blue-glow);
 }
 
 img {
 	width: 150px;
 	float: right;
-	border-radius: 700px;
-	 position: relative;
-}
-/* Style all font awesome icons */
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-}
-/* Add a hover effect if you want */
-.fa:hover {
-  opacity: 0.7;
-}
-
-/* Set a specific color for each brand */
-
-/* LinkedIn */
-.fa-linkedin {
-  /*background: #007bb5;*/
-  color: white;
-	font-size: 50px;
-}
-
-/* Instagram */
-.fa-instagram {
- /*  background: #125688;*/
-  color: white;
-	font-size: 50px;
-}
-/* Wordpress */
-.fa-wordpress {
-   /*background: #21759b; */
-  color: white;
-	font-size: 50px;
-}
-
-/* Responsive*/
-@media screen and (min-width: 900px) {
- .job-item {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 10px;
-    padding: 0;
-	}
-.contact-list {
-	display: flex;
-	justify-content: center;
-	}
-
-h2 {
-text-align: left;
-	}
-.skills-list ul {
-	display: grid;
-  grid-template-columns: repeat(3, 3fr)
-}
-}
-@media screen and (max-width:749px){
-  h1 {
-    font-size: 35px;
-    line-height: 0.9;
-    margin-bottom: 20px;
-  }
-  h2 {
-    line-height: 1;
-  }
-  .contact-list a {
-    padding: 5px;
-	display: flex;
-	justify-content: center;
-  }
-img {
-	width: 80px;
-	float: right;
-	border-radius: 700px;
+	border-radius: 50%;
 	position: relative;
+	box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
 }
+
+/* Font Awesome Icon Configuration (Icon-Only look) */
+.fa {
+	padding: 20px;
+	font-size: 50px !important;
+	width: 60px;
+	text-align: center;
+	text-decoration: none;
+	background: transparent !important;
+	transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.fa:hover {
+	opacity: 1 !important;
+	transform: scale(1.2);
+}
+
+.fa-linkedin {
+	color: var(--jedi-blue-glow) !important;
+	text-shadow: 0 0 8px var(--jedi-blue-glow);
+}
+
+.fa-instagram {
+	color: #ff007f !important; /* Luminous Neon Pink / Crimson */
+	text-shadow: 0 0 8px #ff007f;
+}
+
+.fa-wordpress {
+	color: var(--jedi-green-glow) !important;
+	text-shadow: 0 0 8px var(--jedi-green-glow);
+}
+
+/* Responsive Grid Adjustments */
+@media screen and (min-width: 900px) {
+	.job-item {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		column-gap: 10px;
+		padding: 0;
+	}
+	.contact-list {
+		display: flex;
+		justify-content: center;
+	}
+	h2 {
+		text-align: left;
+	}
+	.skills-list ul {
+		display: grid;
+		grid-template-columns: repeat(3, 3fr);
+	}
+}
+
+@media screen and (max-width:749px) {
+	h1 {
+		font-size: 30px;
+		line-height: 1.1;
+		margin-bottom: 20px;
+	}
+	h2 {
+		font-size: 14px;
+		line-height: 1.4;
+	}
+	.contact-list a {
+		padding: 5px;
+		display: flex;
+		justify-content: center;
+	}
+	img {
+		width: 100px;
+		float: none;
+		display: block;
+		margin: 0 auto 20px auto;
+	}
 }
