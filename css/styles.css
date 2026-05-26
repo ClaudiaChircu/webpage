@@ -114,14 +114,14 @@ h3 {
 header {
 	background: var(--jedi-panel);
 	color: var(--jedi-text);
-	text-align: center;
+	text-align: justify;
 	padding: 40px 0;
 	border-bottom: 2px solid var(--jedi-blue-glow);
 	box-shadow: 0 4px 20px rgba(0, 210, 255, 0.15);
 }
 
 header p {
-	text-align: center;
+	text-align: justify;
 }
 
 ul {
