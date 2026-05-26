@@ -174,12 +174,16 @@ img {
 /* Style all font awesome icons */
 
 .fa {
+  display: inline-block;
   padding: 20px;
   font-size: 50px;
   width: 50px;
-  text-align: center; !important;
+  height: 50px;
+  line-height: 50px;
+  text-align: center !important;
   text-decoration: none;
-justify-content: center;
+  box-sizing: content-box;
+  border-radius: 50%;            /* Makes them perfect circles instead of squares */
 }
 /* Add a hover effect if you want */
 .fa:hover {
