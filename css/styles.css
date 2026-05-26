@@ -180,7 +180,7 @@ img {
   text-align: center; !important;
   text-decoration: none;
 justify-content: center;
-
+}
 /* Add a hover effect if you want */
 .fa:hover {
   opacity: 0.7;
