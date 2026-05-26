@@ -188,19 +188,22 @@ img {
 
 /* LinkedIn */
 .fa-linkedin {
-  background: #007bb5;
+  /*background: #007bb5;*/
   color: white;
+	font-size: 50px;
 }
 
 /* Instagram */
 .fa-instagram {
-  background: #125688;
+ /*  background: #125688;*/
   color: white;
+	font-size: 50px;
 }
 /* Wordpress */
 .fa-wordpress {
-  background: #21759b; 
+   /*background: #21759b; */
   color: white;
+	font-size: 50px;
 }
 
 /* Responsive*/
