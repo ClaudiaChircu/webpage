@@ -172,12 +172,25 @@ img {
 	 position: relative;
 }
 /* Style all font awesome icons */
-.fa {
+/*.fa {
   padding: 20px;
   font-size: 30px;
   width: 50px;
   text-align: center;
   text-decoration: none;
+}*/
+fa {
+  padding: 15px;         /* Balanced inner breathing room */
+  font-size: 40px;       /* 🚀 MAKES THE ICON BIGGER (Increased from 30px) */
+  width: 65px;          /* Increased width to fit the larger icon scale */
+  height: 65px;         /* Increased height to match */
+  line-height: 65px;    /* Vertically center-aligns the logo graphic inside the shape */
+  text-align: center;
+  text-decoration: none;
+  margin: 10px 8px;     /* Gives buttons slightly more space between each other */
+  border-radius: 50%;   /* Keeps them circular */
+  box-sizing: content-box;
+  transition: opacity 0.2s ease;
 }
 
 /* Add a hover effect if you want */
