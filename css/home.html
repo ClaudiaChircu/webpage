@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claudia Chircu</title>
+  
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
+  <link href="https://googleapis.com/css2?family=Quicksand" rel="stylesheet">
+
+  <style>
+    /* Global Page Settings */
+    body {
+      font-family: 'Macondo', cursive;
+      color: #fff8f2;
+      background-color: #009776; /* Full deep teal background color */
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Side Navigation Drawer */
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 100; /* Pushes menu in front of everything */
+      top: 0;
+      left: 0;
+      background-color: #352D39; /* Black coffee */
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #fff8f2;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #D68FD6; /* Glows light purple on hover */
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    /* Main Window Shell */
+    #main {
+      transition: margin-left .5s;
+      padding: 20px;
+    }
+
+    /* --- NEW HERO SPLIT-SCREEN LAYOUT CLASSES --- */
+    
+    /* 1. Flexbox Hero Wrapper */
+    .hero-wrapper {
+      display: flex;
+      flex-wrap: wrap;       /* Snaps to stack vertically on mobile layout */
+      gap: 50px;             /* Space between text column and picture column */
+      align-items: center;   /* Centers elements vertically relative to each other */
+      justify-content: center;
+      max-width: 1100px;     /* Comfortable layout boundary */
+      margin: 50px auto;     /* Centers block horizontally and adds top/bottom room */
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    /* 2. Left Side Text Column Configuration */
+    .hero-text-side {
+      flex: 1.2;             /* Gives text slightly more horizontal ratio space */
+      min-width: 320px;      /* Prevents text from feeling too squished */
+      text-align: left;      /* Standard professional reading format */
+    }
+
+    .hero-text-side h1 {
+      font-size: 46px;
+      margin: 0 0 10px 0;
+    }
+
+    .hero-text-side h2 {
+      color: #ffcba4;        /* Peach accent color */
+      font-size: 22px;
+      margin: 0 0 25px 0;
+      font-weight: normal;
+    }
+
+    .hero-text-side p {
+      font-family: 'Quicksand', sans-serif; /* Clean font for long reading text */
+      font-size: 16px;
+      line-height: 1.7;      /* Healthy text line separation */
+      color: #fff8f2;
+      margin-bottom: 20px;
+    }
+
+    /* 3. Right Side Image Column Configuration */
+    .hero-image-side {
+      flex: 0.8;             /* Proportional column footprint */
+      display: flex;
+      justify-content: center;
+      min-width: 280px;
+    }
+
+    /* 4. Beautiful Profile Image Layering Settings */
+    .profile-image {
+      width: 100%;
+      max-width: 280px;      /* Slightly larger footprint for the side hero slot */
+      height: auto;
+      border-radius: 50%;    /* Makes the image profile perfectly circular */
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+      position: relative;
+      z-index: 10;           /* Renders strictly in front of the green layer background */
+    }
+
+    /* 5. Tool Badges Visual Formatting */
+    .skills-badge-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    .tool-badge {
+      background: #fff8f2;   /* Almost white */
+      color: #352D39;        /* Espresso black text color */
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: bold;
+      font-size: 13px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* 6. Call To Action (CTA) Button Link Component */
+    .cta-button {
+      display: inline-block;
+      background-color: #7F2CCB; /* Premium Violet Shade */
+      color: #fff8f2;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: bold;
+      font-size: 15px;
+      margin-top: 20px;
+      box-shadow: 0 4px 15px rgba(127, 44, 203, 0.3);
+      transition: transform 0.2s ease;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Side Navigation Drawer Element -->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="work_experience.html">Work Experience</a>
+    <a href="education.html">Education & Certifications</a>
+    <a href="skills.html">Skills</a>
+    <a href="hobbies.html">Hobbies</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Main View Area wrapper -->
+  <div id="main">
+    
+    <!-- Top Nav Button Trigger -->
+    <span style="font-size:30px; cursor:pointer; color:#fff8f2;" onclick="openNav()">☰ Explore Portfolio</span>
+
+    <main>
+      <!-- The Responsive Two-Column Wrapper Block Container -->
+      <div class="hero-wrapper">
+        
+        <!-- COLUMN A: Left Text & Info Profile Details -->
+        <div class="hero-text-side">
+          <h1>Claudia Chircu</h1>
+          <h2>Technical Writer. Self-learner. Tech addict.</h2>
+          
+          <p>Hi! I'm Clau and I'm passionate about writing and technology. And writing about technology.😄</p>
+          
+          <p>I created this webpage to showcase my HTML & CSS knowledge gained while working as a Technical Writer. My main work area consists in delivering a variety of outputs: PDF Guides (Admin User Guides, Quick Reference Guides), Online Help, FAQs, Release Notes, Short Videos. The tools I use to write the documentation are MadCap Flare (HTML & CSS), ServiceNow (Knowledge Bases), PPT. I also use Camtasia to edit and build short videos that illustrate newly implemented features.</p>
+          
+          <p>I am an amateur photographer, passionate about astrophotography, boardgames enthusiast, and a dedicated charity fundraiser through local running events.🤩</p>
+          
+          <!-- Integrated Quick Scanning Expertise Stack -->
+          <div class="skills-badge-row">
+            <span class="tool-badge">🛠️ MadCap Flare</span>
+            <span class="tool-badge">☁️ ServiceNow</span>
+            <span class="tool-badge">🎥 Camtasia Studio</span>
+            <span class="tool-badge">📊 PowerPoint</span>
+          </div>
+
+          <!-- Interactive Work Call-To-Action Button Links -->
+          <a href="projects.html" class="cta-button">Explore My Work →</a>
+        </div>
+
+        <!-- COLUMN B: Right Profile Picture Section Display -->
+        <div class="hero-image-side">
+          <img src="DSC09187.png" class="profile-image" alt="Claudia Chircu">
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+  </script>
+
+</body>
+</html>
