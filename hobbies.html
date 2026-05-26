@@ -1,108 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css\styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Quicksand" rel="stylesheet">
-     <title>Hobbies | Claudia Chircu</title>
-</head>
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: 'Macondo', cursive;
-  color: 	#fff8f2;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hobbies | Claudia Chircu</title>
+  
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://googleapis.com" rel="stylesheet">
 
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #352D39;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
+  <style>
+    @import url('https://cdnfonts.com');
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color:#f1f1f1;
-  display: block;
-  transition: 0.3s;
-}
+    /* --- GLOWING JEDI HOBBIES STYLES --- */
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      color: #E2E8F0;            /* Crisp Durasteel Gray */
+      background-color: #0D111A;   /* Deep Space Navy */
+      margin: 0;
+      padding: 0;
+    }
 
-.sidenav a:hover {
-  color: #f1f1f1;
-}
+    /* Side Navigation Drawer */
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 100;            
+      top: 0;
+      left: 0;
+      background-color: #161F30;   /* Starship Control Panel dark blue */
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      border-right: 1px solid rgba(0, 210, 255, 0.3); /* Laser fence border */
+    }
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
+    .sidenav a {
+      padding: 12px 8px 12px 32px;
+      text-decoration: none;
+      font-size: 18px;
+      font-family: 'Share Tech Mono', monospace;
+      color: #E2E8F0;
+      display: block;
+      transition: 0.3s;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
 
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-  background-color: #352D39
-}
+    /* Green lightsaber glow on hover */
+    .sidenav a:hover {
+      color: #39FF14; 
+      text-shadow: 0 0 8px #39FF14;
+      padding-left: 40px;
+    }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    /* Base Navigation Trigger Wrapper */
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;
+      background-color: #0D111A;
+    }
+
+    .menu-trigger {
+      font-family: 'Star Jedi', sans-serif;
+      font-size: 22px;
+      cursor: pointer;
+      color: #00D2FF;             /* Skywalker Blue trigger */
+      text-shadow: 0 0 8px #00D2FF;
+      letter-spacing: 1px;
+    }
+
+    /* Custom Galactic Activity Log Panel Cards */
+    .jedi-hobby-card {
+      background-color: #161F30;
+      border: 1px solid rgba(0, 210, 255, 0.2);
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .jedi-hobby-card:hover {
+      border-color: #00D2FF;
+      box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+    }
+
+    .jedi-hobby-card h3 {
+      font-family: 'Star Jedi', sans-serif;
+      color: #39FF14;             /* Yoda Green highlights for subheaders */
+      text-shadow: 0 0 5px #39FF14;
+      font-size: 16px;
+      font-weight: normal;
+      margin-top: 0;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .jedi-hobby-card p {
+      font-size: 16px;
+      color: #E2E8F0;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .jedi-hobby-card .stats-box {
+      margin-top: 15px;
+      padding: 10px;
+      background: #0D111A;
+      border-radius: 8px;
+      border-left: 3px solid #00D2FF;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <!-- Side Navigation Drawer Element -->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="home.html">Home</a>
-  <a href="projects.html">Projects</a>
-  <a href="work_experience.html">Work Experience</a>
-  <a href="education.html">Education & Certifications</a>
-  <a href="skills.html">Skills</a>
-  <a href="hobbies.html">Hobbies</a>
-  <a href="contact.html">Contact</a>
+    <a href="projects.html">Projects</a>
+    <a href="work_experience.html">Work Experience</a>
+    <a href="education.html">Education & Certifications</a>
+    <a href="skills.html">Skills</a>
+    <a href="hobbies.html">Hobbies</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
-</div>
+  <!-- Main View Area Workspace -->
+  <div id="main">
+    <span class="menu-trigger" onclick="openNav()">☰ Explore Portfolio</span>
+    
+    <!-- Central Content Area -->
+    <main class="content-wrap" style="padding-top: 40px; padding-bottom: 40px;">
+      
+      <h2 style="font-family: 'Star Jedi', sans-serif; font-weight: normal; color: #ffffff; text-shadow: 0 0 8px #00D2FF, 0 0 15px #00D2FF; text-align: center; margin-bottom: 40px; font-size: 28px; letter-spacing: 1px;">
+        Life Outside Work
+      </h2>
 
-<div id="main">
-  
-  <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; Explore Portfolio</span>
-</div>
-
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
-</script>
-
-       <!-- Hobbies -->
-     <section class="hobbies"  style="background-color: #009776; min-height: 100vh; margin: 0;">
-     <div class="content-wrap">
-      <h2>Hobbies</h2>
-      <div class="hobbies">
-     <p> Astrophotography (The Creative Mind)</p>
-    <p>Running & PRs (The Disciplined Drive)</p>
-        <p>Fundraising & NGO Support (The Purpose)</p>
-    </div>
+      <!-- CARD 1: ASTROPHOTOGRAPHY -->
+      <div class="jedi-hobby-card">
+        <h3>Astrophotography _ The Creative Mind</h3>
+         <!--  <p>
+          I am an amateur photographer with a true passion for capturing the cosmos. Tracking star movements and mapping celestial bodies requires immense precision, deep patience, and an understanding of light data processing—technical skills that beautifully mirror my attention to detail as a documentarian. I also enjoy winding down with strategy boardgames.
+        </p>  -->
       </div>
-    </section>
-  <!-- End of skills block. -->
+
+      <!-- CARD 2: RUNNING -->
+      <div class="jedi-hobby-card">
+        <h3>Running & PRs _ The Disciplined Drive</h3>
+    <!-- <p>
+          Outside of working hours, you will usually find me on the move—training in the park to keep in top shape for local running competitions. Maintaining physical fitness gives me the constant energy needed to keep pace with my little one at home.
+        </p> -->
+        <div class="stats-box">
+          <span style="color: #00D2FF; font-weight: bold;">[ SYSTEM LOG ] :</span> Training protocol active. Preparing for upcoming planetary races.
+        </div>
+      </div>
+
+      <!-- CARD 3: FUNDRAISING -->
+      <div class="jedi-hobby-card">
+        <h3>Fundraising & NGO Support _ The Purpose</h3>
+        <!--  <p>
+          For me, running is more than just personal health or competitive milestones; it is a way to generate real-world impact. I actively use my races as creative platforms to act as a dedicated charity fundraiser, raising vital awareness and resources for healthcare causes and non-governmental organizations (NGOs) close to my heart.
+        </p> -->
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+  </script>
+
+</body>
+</html>
