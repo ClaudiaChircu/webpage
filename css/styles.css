@@ -177,8 +177,9 @@ fa {
   padding: 20px;
   font-size: 50px;
   width: 50px;
-  text-align: center;
+  text-align: center; !important;
   text-decoration: none;
+justify-content: center;
 
 /* Add a hover effect if you want */
 .fa:hover {
@@ -236,7 +237,7 @@ text-align: left;
   }
   .contact-list a {
     padding: 5px;
-	  display: flex;
+	display: flex;
 	justify-content: center;
   }
 img {
