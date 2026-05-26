@@ -1,111 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css\styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Quicksand" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claudia Chircu | Galactic Portfolio</title>
+  
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  
+  <!-- 1. IMPORT THE SCI-FI TERMINAL FONT AND STAR WARS LOGO FONT -->
+  <link href="https://googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://cdnfonts.com');
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: 'Macondo', cursive;
-  color: 	#fff8f2;
-}
+    /* Global Page Settings */
+    body {
+      /* 2. SET THE TEXT PARAGRAPHS TO THE TECH MONO FONT */
+      font-family: 'Share Tech Mono', monospace;
+      color: #E2E8F0;          /* Crisp Durasteel Gray */
+      background-color: #0D111A; /* Deep Space Navy Background */
+      margin: 0;
+      padding: 0;
+      letter-spacing: 0.5px;   /* Enhances terminal spacing look */
+    }
 
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #352D39;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
+    /* Side Navigation Panel Box */
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 100;            
+      top: 0;
+      left: 0;
+      background-color: #161F30; /* Starship Control Panel dark blue */
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      border-right: 1px solid rgba(0, 210, 255, 0.3); /* Blue laser border */
+    }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color:#f1f1f1;
-  display: block;
-  transition: 0.3s;
-}
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 20px;
+      font-family: 'Star Jedi', sans-serif;
+      color: #E2E8F0;
+      display: block;
+      transition: 0.3s;
+      letter-spacing: 1px;
+    }
 
-.sidenav a:hover {
-  color: #f1f1f1;
-}
+    /* Ignite links with a green neon lightsaber glow on hover */
+    .sidenav a:hover {
+      color: #39FF14; 
+      text-shadow: 0 0 8px #39FF14;
+    }
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
 
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-  background-color: #352D39
-}
+    /* Base Menu Trigger Shell */
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;
+      background-color: #0D111A;
+    }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
+    .menu-trigger {
+      font-family: 'Star Jedi', sans-serif;
+      font-size: 22px;
+      cursor: pointer;
+      color: #00D2FF; /* Skywalker Blue trigger button */
+      text-shadow: 0 0 8px #00D2FF;
+      letter-spacing: 1px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 14px;}
+    }
+  </style>
 </head>
 <body>
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="home.html">Home</a>
-  <a href="projects.html">Projects</a>
-  <a href="work_experience.html">Work Experience</a>
-  <a href="education.html">Education & Certifications</a>
-  <a href="skills.html">Skills</a>
-  <a href="hobbies.html">Hobbies</a>
-  <a href="contact.html">Contact</a>
- 
-</div>
+  <!-- Side Navigation Drawer Element -->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="home.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="work_experience.html">Work Experience</a>
+    <a href="education.html">Education & Certifications</a>
+    <a href="skills.html">Skills</a>
+    <a href="hobbies.html">Hobbies</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
-<div id="main">
-  
-  <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; Explore Portfolio</span>
-</div>
-
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
-</script>
-    <title>Claudia Chircu</title>
-  </head>
-  <body>
+  <!-- Main Workspace Area -->
+  <div id="main">
+    <!-- Clickable Navigation Trigger Line -->
+    <span class="menu-trigger" onclick="openNav()">☰ Explore Portfolio</span>
+    
     <main>
       <!-- ***********************  ABOUT / PROFILE  *********************** -->
-      <header>
-        <div class="content-wrap" style="background-color: #352D39;">
-          <img src="DSC09187.png" class="image">
-          <h1>Claudia Chircu</h1>
-            <h2 class="header-title" style="text-align:center"; max-width: 400px;>Technical Writer. Self-learner. Tech addict.</h2>
-              <p>Hi! I'm Clau and I'm passionate about writing and technology. And writing about technology.😄</p>
-              <p>I created this webpage to showcase my HTML & CSS knowldge gained while working as a Technical Writer. My main work area consists in delivering a variety of outputs: PDF Guides (Admin User Guides, Quick Reference Guides), Online Help, FAQs, Release Notes, Short Videos. The tools I use to write the documentation are MadCap Flare (HTML & CSS), ServiceNOW (Knowledge Bases), PPT. I also use Camtasia to edit and build short videos that illustrate newly implemented features.</p>
-              <p>I am an amateur photographer, passionate about astrophotography, boardgames enthusiast and a dedicated charity fundraiser through local running events.🤩</p>
+      <header style="background-color: #161F30; border-bottom: 2px solid #00D2FF; box-shadow: 0 0 15px rgba(0, 210, 255, 0.2); padding: 40px 0;">
+        <div class="content-wrap">
+          
+          <!-- Profile image wrapped with a matching blue aura halo glow -->
+          <img src="DSC09187.png" class="image" alt="Claudia Chircu" style="border-radius: 50%; box-shadow: 0 0 15px rgba(0, 210, 255, 0.4); max-width: 150px; float: right; margin-left: 20px;">
+          
+          <!-- Main Title with Star Jedi Font and Neon Glow -->
+          <h1 style="font-family: 'Star Jedi', sans-serif; font-weight: normal; font-size: 38px; color: #ffffff; text-shadow: 0 0 8px #00D2FF, 0 0 15px #00D2FF; text-align: left; letter-spacing: 2px;">
+            Claudia Chircu
+          </h1>
+          
+          <!-- Subtitle with Neon Green Glow -->
+          <h2 class="header-title" style="font-family: 'Star Jedi', sans-serif; text-align: left; max-width: 600px; color: #39FF14; text-shadow: 0 0 5px #39FF14; font-weight: normal; font-size: 16px; line-height: 1.6; margin-top: 15px; margin-bottom: 25px; letter-spacing: 1px;">
+            Technical Writer. Self-learner. Tech addict.
+          </h2>
+          
+          <!-- 3. UPDATED TEXT PARAGRAPHS USING THE NEW SCI-FI TERMINAL FONT -->
+          <div style="font-family: 'Share Tech Mono', monospace; text-align: left; line-height: 1.8; color: #E2E8F0; font-size: 17px;">
+            <p>Hi! I'm Clau and I'm passionate about writing and technology. And writing about technology.😄</p>
+            
+            <p>I created this webpage to showcase my HTML & CSS knowledge gained while working as a Technical Writer. My main work area consists in delivering a variety of outputs: PDF Guides (Admin User Guides, Quick Reference Guides), Online Help, FAQs, Release Notes, Short Videos. The tools I use to write the documentation are MadCap Flare (HTML & CSS), ServiceNow (Knowledge Bases), PPT. I also use Camtasia to edit and build short videos that illustrate newly implemented features.</p>
+            
+            <p>I am an amateur photographer, passionate about astrophotography, boardgames enthusiast, and a dedicated charity fundraiser through local running events.🤩</p>
+          </div>
+
         </div>
       </header>
-  </body>
+    </main>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+  </script>
+
+</body>
 </html>
