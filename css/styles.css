@@ -172,16 +172,10 @@ img {
 	 position: relative;
 }
 /* Style all font awesome icons */
-/*.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-}*/
+
 fa {
   padding: 15px;         /* Balanced inner breathing room */
-  font-size: 40px;       /* 🚀 MAKES THE ICON BIGGER (Increased from 30px) */
+  font-size: 50px;       /* 🚀 MAKES THE ICON BIGGER (Increased from 30px) */
   width: 65px;          /* Increased width to fit the larger icon scale */
   height: 65px;         /* Increased height to match */
   line-height: 65px;    /* Vertically center-aligns the logo graphic inside the shape */
@@ -249,6 +243,8 @@ text-align: left;
   }
   .contact-list a {
     padding: 5px;
+	  display: flex;
+	justify-content: center;
   }
 img {
 	width: 80px;
