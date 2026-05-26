@@ -1,234 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Claudia Chircu</title>
-  
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://googleapis.com" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work Experience | Claudia Chircu</title>
 
-  <style>
-    @import url('https://cdnfonts.com');
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    /* --- GLOWING JEDI STYLES --- */
-    body {
-      font-family: 'Share Tech Mono', monospace;
-      color: #E2E8F0;            /* Crisp Durasteel Gray */
-      background-color: #0D111A;   /* Deep Space Navy Background */
-      margin: 0;
-      padding: 0;
-    }
+<style>
 
-    /* Side Navigation Drawer Box */
-    .sidenav {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      z-index: 100;            
-      top: 0;
-      left: 0;
-      background-color: #161F30;   /* Starship Control Panel dark blue */
-      overflow-x: hidden;
-      transition: 0.5s;
-      padding-top: 60px;
-      border-right: 1px solid rgba(0, 210, 255, 0.3); /* Blue laser border */
-    }
+/* BASE */
+body {
+  font-family: 'Share Tech Mono', monospace;
+  color: #E2E8F0;
+  background-color: #0D111A;
+  margin: 0;
+  padding: 0;
+}
 
-    .sidenav a {
-      padding: 12px 8px 12px 32px;
-      text-decoration: none;
-      font-size: 18px;
-      font-family: 'Share Tech Mono', monospace;
-      color: #E2E8F0;
-      display: block;
-      transition: 0.3s;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
+/* ✅ FIXED SIDENAV */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: #161F30;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  border-right: 1px solid rgba(0, 210, 255, 0.3);
+}
 
-    /* Base Navigation Trigger Wrapper */
-    #main {
-      transition: margin-left .5s;
-      padding: 16px;
-      background-color: #0D111A;
-    }
+.sidenav a {
+  padding: 12px 8px 12px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #E2E8F0;
+  display: block;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
 
-    .menu-trigger {
-      font-family: 'Star Jedi', sans-serif;
-      font-size: 22px;
-      cursor: pointer;
-      color: #00D2FF;             /* Skywalker Blue trigger */
-      text-shadow: 0 0 8px #00D2FF;
-      letter-spacing: 1px;
-    }
+/* ✅ NEW (from working version) */
+.sidenav a:hover {
+  color: #39FF14;
+  text-shadow: 0 0 8px #39FF14;
+  padding-left: 40px;
+}
 
-    /* Custom Galactic Command Mission Card Panels */
-    .jedi-mission-card {
-      background-color: #161F30;
-      border: 1px solid rgba(0, 210, 255, 0.2);
-      border-radius: 16px;
-      padding: 30px;
-      margin-bottom: 35px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-      transition: border-color 0.3s, box-shadow 0.3s;
-    }
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
 
-    .jedi-mission-card:hover {
-      border-color: #00D2FF;
-      box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
-    }
+/* MAIN */
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
 
-    .jedi-mission-card h3 {
-      font-family: 'Share Tech Mono', monospace;
-      color: #39FF14;             /* Yoda Green highlights for role designations */
-      text-shadow: 0 0 4px #39FF14;
-      font-size: 19px;
-      margin: 0 0 8px 0;
-    }
+/* MENU BUTTON */
+.menu-trigger {
+  font-size: 22px;
+  cursor: pointer;
+  color: #00D2FF;
+  text-shadow: 0 0 8px #00D2FF;
+}
 
-    .timeline-stamp {
-      font-size: 14px;
-      color: #00D2FF;
-      text-shadow: 0 0 2px rgba(0, 210, 255, 0.3);
-      margin-bottom: 20px;
-      text-transform: uppercase;
-    }
+/* CARD UI */
+.jedi-mission-card {
+  background-color: #161F30;
+  border: 1px solid rgba(0, 210, 255, 0.2);
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 35px;
+}
 
-    /* Terminal Action Tracker Lists */
-    .terminal-bullet-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+.jedi-mission-card:hover {
+  border-color: #00D2FF;
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+}
 
-    .terminal-bullet-list li {
-      position: relative;
-      padding-left: 25px;
-      margin-bottom: 12px;
-      font-size: 15px;
-      line-height: 1.6;
-    }
+.jedi-mission-card h3 {
+  color: #39FF14;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
 
-    /* Adds a sleek sci-fi tracker arrow [>] in front of each bullet duty */
-    .terminal-bullet-list li::before {
-      content: ">";
-      position: absolute;
-      left: 0;
-      color: #00D2FF;
-      text-shadow: 0 0 4px #00D2FF;
-      font-weight: bold;
-    }
-  </style>
+.timeline-stamp {
+  color: #00D2FF;
+  margin-bottom: 15px;
+}
+
+/* LIST */
+.terminal-bullet-list {
+  list-style: none;
+  padding: 0;
+}
+
+.terminal-bullet-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.terminal-bullet-list li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: #00D2FF;
+}
+
+</style>
 </head>
+
 <body>
 
-  <!-- Side Navigation Drawer Element -->
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="home.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="work_experience.html">Work Experience</a>
-    <a href="education.html">Education & Certifications</a>
-    <a href="skills.html">Skills</a>
-    <a href="hobbies.html">Hobbies</a>
-    <a href="contact.html">Contact</a>
-  </div>
+<!-- ✅ SIDENAV -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="home.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="work_experience.html">Work Experience</a>
+  <a href="education.html">Education</a>
+  <a href="skills.html">Skills</a>
+  <a href="contact.html">Contact</a>
+</div>
 
+<!-- ✅ MAIN -->
+<div id="main">
 
-  <!-- Main View Area Workspace -->
-  <div id="main">
-    <span class="menu-trigger" onclick="openNav()">☰ Explore Portfolio</span>
-    
-    <!-- Central Content Area -->
-    <main class="content-wrap" style="padding-top: 40px; padding-bottom: 40px;">
-      
-      <h2 style="font-family: 'Star Jedi', sans-serif; font-weight: normal; color: #ffffff; text-shadow: 0 0 8px #00D2FF, 0 0 15px #00D2FF; text-align: center; margin-bottom: 15px; font-size: 28px; letter-spacing: 1px;">
-        Mission Logs
-      </h2>
+<span class="menu-trigger" onclick="openNav()">☰ Explore Portfolio</span>
 
-      <!-- Executive Overview Entry -->
-      <p style="text-align: center; max-width: 650px; margin: 0 auto 40px auto; line-height: 1.7; font-size: 16px; color: #E2E8F0;">
-        Experienced in customer support, demonstrating a deep engineering grasp of complex technical processes, architecture methodologies, and systems documentation, balanced with an intuitive core component of empathy.
-      </p>
+<main style="padding:40px; max-width:900px; margin:auto;">
 
-      <!-- LOG 1: TECHNICAL WRITER -->
-      <div class="jedi-mission-card">
-        <h3>Technical Writer @ _VOIS (Vodafone Intelligent Solutions)</h3>
-        <div class="timeline-stamp">SYSTEM TIMELINE: June 2021 - PRESENT</div>
-        
-        <ul class="terminal-bullet-list">
-          <li>I create comprehensive technical documentation for end-users, compiling detailed User Guides and Quick Reference Guides to optimize operational comprehension of product architectures.</li>
-          <li>I audit and re-engineer active system assets when fresh technical iterations or product updates deploy to production environments.</li>
-          <li>I utilize core industry authoring tools to structure and build data streams, including MadCap Software, MS Word, and PowerPoint layouts.</li>
-          <li>I regulate and enforce documentation quality standards in strict compliance with internal design specifications and core business rules.</li>
-          <li>I drive internal visibility initiatives across the enterprise by authoring corporate SharePoint instances and widgets for division tracking newsletters.</li>
-        </ul>
-      </div>
+<h2 style="text-align:center; color:#00D2FF;">Mission Logs</h2>
 
-      <!-- LOG 2: ACCOUNTS PAYABLE BUSINESS SUPPORT -->
-      <div class="jedi-mission-card">
-        <h3>Accounts Payable Business Support Services L1 @ Connections Romania for Procter & Gamble</h3>
-        <div class="timeline-stamp">SYSTEM TIMELINE: July 2020 - June 2021</div>
-        
-        <ul class="terminal-bullet-list">
-          <li>Served as a Regional Application Administrator managing access provisions for internal Accounts Payable systems, escalating system bugs to L2 nodes.</li>
-          <li>Maintained structural databases across proprietary applications to verify precision for P2P transaction tasks.</li>
-          <li>Executed manual testing protocols for dynamic Agile initiatives during critical UAT lifecycles, performing Regression Testing (NNIT) to trace downstream dependencies.</li>
-          <li>Provided technical troubleshooting protocols for core transactional P2P Ops teams under strict policy guidelines.</li>
-          <li>Monitored Electronic Invoicing Command Dashboards to isolate, debug, and resolve system logic faults bottlenecking SAP pipelines.</li>
-          <li>Delivered comprehensive problem resolutions via root-cause investigation mechanisms, escalating blocks to front-office nodes.</li>
-          <li>Investigated unclassified system exceptions, collaborating with 3rd-party engineering vectors to resolve deadlocks and clarify unknown error signatures.</li>
-        </ul>
-      </div>
+<p style="text-align:center; max-width:650px; margin:20px auto;">
+Experienced in customer support, technical documentation, and system architecture.
+</p>
 
-      <!-- LOG 3: GLOBAL TECHNICAL SUPPORT -->
-      <div class="jedi-mission-card">
-        <h3>Global Technical Support @ Connections Romania for Procter & Gamble</h3>
-        <div class="timeline-stamp">SYSTEM TIMELINE: October 2019 - June 2020</div>
-        
-        <ul class="terminal-bullet-list">
-          <li>Resolved technical service tickets within global ServiceNow infrastructure, consistently satisfying strict service-level agreements (SLAs).</li>
-          <li>Identified complex system exceptions, logging structural application bugs into Jira tracking clusters for L2/L3 remediation.</li>
-          <li>Compiled operational performance metrics and transaction output summaries for business intelligence evaluation.</li>
-          <li>Initiated external change requests to process database and structural asset changes on client web interfaces.</li>
-          <li>Authored technical interface documentation for system users to streamline cross-border network tracking.</li>
-          <li>Facilitated zero-downtime operations during business hand-offs by executing smooth onboarding handshakes with oncoming support teams.</li>
-        </ul>
-      </div>
+<!-- JOB 1 -->
+<div class="jedi-mission-card">
+<h3>Technical Writer @ _VOIS</h3>
+<div class="timeline-stamp">June 2021 - Present</div>
 
-      <!-- LOG 4: VENDOR MASTER DATA ANALYST -->
-      <div class="jedi-mission-card">
-        <h3>Vendor Master Data Analyst @ Connections Romania for Procter & Gamble</h3>
-        <div class="timeline-stamp">SYSTEM TIMELINE: October 2018 - September 2019</div>
-        
-        <ul class="terminal-bullet-list">
-          <li>Generated daily system audits on transactional exceptions, extracting metadata to isolate specific accounting processing blocks.</li>
-          <li>Conducted analytical investigations within enterprise SAP layouts utilizing 3-way match validation algorithms.</li>
-          <li>Processed critical supplier updates by generating data change instances inside Aravo Third-Party Risk Management systems.</li>
-          <li>Logged incident records inside ServiceNow tracking architectures to resolve synchronization errors in Aravo-to-SAP data pipelines.</li>
-          <li>Regulated transaction flows to optimize speed, mitigating overdue processing risks within enterprise procurement layers.</li>
-           </ul>
-           </div>
-        </section>
-      </div>
-  
-  <script>
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "250px";
-      document.getElementById("main").style.marginLeft = "250px";
-    }
+<ul class="terminal-bullet-list">
+<li>Create technical documentation and user guides</li>
+<li>Update systems with new product releases</li>
+<li>Use MadCap, Word and PowerPoint</li>
+<li>Ensure documentation quality standards</li>
+<li>Manage SharePoint content</li>
+</ul>
+</div>
 
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-      document.getElementById("main").style.marginLeft= "0";
-    }
-  </script>
+<!-- JOB 2 -->
+<div class="jedi-mission-card">
+<h3>Accounts Payable Support @ P&G</h3>
+<div class="timeline-stamp">July 2020 - June 2021</div>
+
+<ul class="terminal-bullet-list">
+<li>Managed application access</li>
+<li>Maintained accounting databases</li>
+<li>Performed testing and troubleshooting</li>
+<li>Resolved technical issues</li>
+</ul>
+</div>
+
+</main>
+</div>
+
+<!--  SCRIPT -->
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+</script>
 
 </body>
 </html>
-    </section>
-        <!-- End of Job block. -->
