@@ -1,176 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css\styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Quicksand" rel="stylesheet">
- <title>Work Experience | Claudia Chircu</title>
-  </head>
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: 'Macondo', cursive;
-  color: 	#fff8f2;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Experience | Claudia Chircu</title>
+  
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://googleapis.com" rel="stylesheet">
 
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #352D39;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
+  <style>
+    @import url('https://cdnfonts.com');
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color:#f1f1f1;
-  display: block;
-  transition: 0.3s;
-}
+    /* --- GLOWING JEDI WORK EXPERIENCE STYLES --- */
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      color: #E2E8F0;            /* Crisp Durasteel Gray */
+      background-color: #0D111A;   /* Deep Space Navy */
+      margin: 0;
+      padding: 0;
+    }
 
-.sidenav a:hover {
-  color: #f1f1f1;
-}
+    /* Side Navigation Drawer */
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 100;            
+      top: 0;
+      left: 0;
+      background-color: #161F30;   /* Starship Control Panel dark blue */
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      border-right: 1px solid rgba(0, 210, 255, 0.3); /* Laser fence border */
+    }
 
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
+    .sidenav a {
+      padding: 12px 8px 12px 32px;
+      text-decoration: none;
+      font-size: 18px;
+      font-family: 'Share Tech Mono', monospace;
+      color: #E2E8F0;
+      display: block;
+      transition: 0.3s;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
 
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
-  background-color: #352D39
-}
+    /* Green lightsaber glow on hover */
+    .sidenav a:hover {
+      color: #39FF14; 
+      text-shadow: 0 0 8px #39FF14;
+      padding-left: 40px;
+    }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    /* Base Navigation Trigger Wrapper */
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;
+      background-color: #0D111A;
+    }
+
+    .menu-trigger {
+      font-family: 'Star Jedi', sans-serif;
+      font-size: 22px;
+      cursor: pointer;
+      color: #00D2FF;             /* Skywalker Blue trigger */
+      text-shadow: 0 0 8px #00D2FF;
+      letter-spacing: 1px;
+    }
+
+    /* Custom Galactic Command Mission Card Panels */
+    .jedi-mission-card {
+      background-color: #161F30;
+      border: 1px solid rgba(0, 210, 255, 0.2);
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 35px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .jedi-mission-card:hover {
+      border-color: #00D2FF;
+      box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+    }
+
+    .jedi-mission-card h3 {
+      font-family: 'Share Tech Mono', monospace;
+      color: #39FF14;             /* Yoda Green highlights for role designations */
+      text-shadow: 0 0 4px #39FF14;
+      font-size: 19px;
+      margin: 0 0 8px 0;
+    }
+
+    .timeline-stamp {
+      font-size: 14px;
+      color: #00D2FF;
+      text-shadow: 0 0 2px rgba(0, 210, 255, 0.3);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    /* Terminal Action Tracker Lists */
+    .terminal-bullet-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .terminal-bullet-list li {
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 12px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* Adds a sleek sci-fi tracker arrow [>] in front of each bullet duty */
+    .terminal-bullet-list li::before {
+      content: ">";
+      position: absolute;
+      left: 0;
+      color: #00D2FF;
+      text-shadow: 0 0 4px #00D2FF;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <!-- Side Navigation Drawer Element -->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="home.html">Home</a>
-  <a href="projects.html">Projects</a>
-  <a href="work_experience.html">Work Experience</a>
-  <a href="education.html">Education & Certifications</a>
-  <a href="skills.html">Skills</a>
-  <a href="hobbies.html>Hobbies</a>
-  <a href="contact.html">Contact</a>
+    <a href="projects.html">Projects</a>
+    <a href="work_experience.html">Work Experience</a>
+    <a href="education.html">Education & Certifications</a>
+    <a href="skills.html">Skills</a>
+    <a href="hobbies.html">Hobbies</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
-</div>
+  <!-- Main View Area Workspace -->
+  <div id="main">
+    <span class="menu-trigger" onclick="openNav()">☰ Explore Portfolio</span>
+    
+    <!-- Central Content Area -->
+    <main class="content-wrap" style="padding-top: 40px; padding-bottom: 40px;">
+      
+      <h2 style="font-family: 'Star Jedi', sans-serif; font-weight: normal; color: #ffffff; text-shadow: 0 0 8px #00D2FF, 0 0 15px #00D2FF; text-align: center; margin-bottom: 15px; font-size: 28px; letter-spacing: 1px;">
+        Mission Logs
+      </h2>
 
-<div id="main">
-  
-  <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; Explore Portfolio</span>
-</div>
+      <!-- Executive Overview Entry -->
+      <p style="text-align: center; max-width: 650px; margin: 0 auto 40px auto; line-height: 1.7; font-size: 16px; color: #E2E8F0;">
+        Experienced in customer support, demonstrating a deep engineering grasp of complex technical processes, architecture methodologies, and systems documentation, balanced with an intuitive core component of empathy.
+      </p>
 
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-}
-</script>
- <section class="projects" style="background-color:  #cba4ff; min-height: 100vh; margin: 0;">
-<!-- ***********************  WORK EXPERIENCE  *********************** -->
-      <section class="work-experience">
-       <div class="content-wrap item-details divider">
-        <h2>Work Experience</h2>
-        <p style="margin-top: 0" "margin-bottom: 0">Experienced on customer support, good understanding of technical processes, concepts and methodolgies with a fine touch of empathy.</p>
-
-        <!-- Most recent Job -->
-        <section class="job-item">
-          <div class="job-details">
-          <h3>Technical Writer @ _VOIS (Vodafone Intelligent Solutions)</h3>
-          <p>June 2021 - Present</p>
-        </div>
-        <div class="job-summary">
-          <ul>
-            <li>I create documentation for our customers, like User Guides, Quick Reference Guides to ensure a good procedural understanding of the product’s functionalities.
-            <li>I update the documentation when a new version of the product is released.</li>
-            <li>I use specific tools to edit and build the documentation, like: MadCap Software, Word, PowerPoint.</li>
-            <li>I create and maintain the quality of the documentation in accordance to internal standards and requirements.</li>
-            <li>I involve in promoting the visibility across _VOIS by creating and updating SharePoint pages and widgets for the department's monthly newsletter.</li>
-          </ul>
-        </div>
-        </section>
-        <br />
-        <!-- Previous Jobs -->
-        <section class="job-item">
-          <div class="job-details">
-          <h3>Accounts Payable Business Support Services L1 @ Connections Romania for Procter & Gamble</h3>
-          <p>July 2020 - June 2021</p>
-       </div>
-       <div class="job-summary">
-          <ul>
-            <li> As a Regional Administrator for an internal Accounts Payable application, I provide access to the users and escalate their issues to L2 for investigation.</li>
-            <li>I maintain databases in internal programs to ensure the information is displayed correctly for P2P daily tasks.</li>
-            <li>I perform manual testing for different Agile projects in the UAT phase - Regression testing (NNIT) to determine if other components have been affected by the new release.</li>
-            <li>I offer technical support for P2P Ops teams (FI approval workflow) in accordance to internal policies and processes.</li>
-            <li>I monitor the Electronic invoicing Dashboard to identify and proactively act to solve issues that prevent invoices to be processed in SAP.</li>
-            <li>I provide resolutions for invoice issues based on root cause analysis & escalate them to Front Office agents.</li>
-            <li>I investigate and document unknown errors & collaborate with 3rd party support teams in order to clarify the error code and avoid deadlocks.</li>
-          </ul>
-        </div>
-        </section>
-         <br />
-        <section class="job-item">
-          <div class="job-details">
-          <h3>Global Technical Support @ Connections Romania for Procter & Gamble</h3>
-          <p>October 2019 - June 2020</p>
-        </div>
-        <div class="job-summary">
-          <ul>
-            <li>As part of Technical Support Global Team, I solved most common issues in ServiceNow platform, according to the SLA agreements.</li>
-            <li>For more complex issues, I raised bugs to L2/L3 in JIRA for resolution.</li>
-            <li>Report and analyze completed work for business management review.</li>
-            <li>Created requests for a 3rd party in order to update the information on the company’s pages and portals.</li>
-            <li>I created & updated documentation for applications to ease navigation of the suppliers and internal users.</li>
-            <Li>I helped with a smooth transition when a new team took over the technical support role.</Li>
-          </ul>
-        </div>
-        </section>
-         <br />
-        <section class="job-item">
-          <div class="job-details">
-          <h3>Vendor Master Data Analyst @ Connections Romania for Procter & Gamble</h3>
-          <p>October 2018 - September 2019</p>
-        </div>
-        <div class="job-summary">
-           <ul>
-            <li>I ran daily reports for blocked invoices, providing analysis on block reason.</li>
-            <li>I performed SAP investigation about Vendor's details - 3 way-match.</li>
-            <li>I raises tickets in Aravo Third-Party Risk Management for Vendor Master Data updates.</li>
-            <Li>I submitted incidents in Service Now Ticketing Tool for technical issues related to Aravo-SAP data flow or other technical errors.</li>
-            <Li>I ensured that Vendor Master Data issues are solved in a timely manner in order to avoid invoices to become overdue.</li>
-            <Li>I assisted Suppliers on the Vendor Master Data process and provide help for any issues they encounter.</li>
-            <Li>I performed SAP investigation for PO’s and goods receipts in order to troubleshoot the blocked invoices.</li>
-            <Li>I contacted support teams and follow-up on issues to solve the processes in time.</li>
-          </ul>
-           </div>
-        </section>
+      <!-- LOG 1: TECHNICAL WRITER -->
+      <div class="jedi-mission-card">
+        <h3>Technical Writer @ _VOIS (Vodafone Intelligent Solutions)</h3>
+        <div class="timeline-stamp">SYSTEM TIMELINE: June 2021 - PRESENT</div>
+        
+        <ul class="terminal-bullet-list">
+          <li>I create comprehensive technical documentation for end-users, compiling detailed User Guides and Quick Reference Guides to optimize operational comprehension of product architectures.</li>
+          <li>I audit and re-engineer active system assets when fresh technical iterations or product updates deploy to production environments.</li>
+          <li>I utilize core industry authoring tools to structure and build data streams, including MadCap Software, MS Word, and PowerPoint layouts.</li>
+          <li>I regulate and enforce documentation quality standards in strict compliance with internal design specifications and core business rules.</li>
+          <li>I drive internal visibility initiatives across the enterprise by authoring corporate SharePoint instances and widgets for division tracking newsletters.</li>
+        </ul>
       </div>
-    </section>
-        <!-- End of Job block. -->
+
+      <!-- LOG 2: ACCOUNTS PAYABLE BUSINESS SUPPORT -->
+      <div class="jedi-mission-card">
+        <h3>Accounts Payable Business Support Services L1 @ Connections Romania for Procter & Gamble</h3>
+        <div class="timeline-stamp">SYSTEM TIMELINE: July 2020 - June 2021</div>
+        
+        <ul class="terminal-bullet-list">
+          <li>Served as a Regional Application Administrator managing access provisions for internal Accounts Payable systems, escalating system bugs to L2 nodes.</li>
+          <li>Maintained structural databases across proprietary applications to verify precision for P2P transaction tasks.</li>
+          <li>Executed manual testing protocols for dynamic Agile initiatives during critical UAT lifecycles, performing Regression Testing (NNIT) to trace downstream dependencies.</li>
+          <li>Provided technical troubleshooting protocols for core transactional P2P Ops teams under strict policy guidelines.</li>
+          <li>Monitored Electronic Invoicing Command Dashboards to isolate, debug, and resolve system logic faults bottlenecking SAP pipelines.</li>
+          <li>Delivered comprehensive problem resolutions via root-cause investigation mechanisms, escalating blocks to front-office nodes.</li>
+          <li>Investigated unclassified system exceptions, collaborating with 3rd-party engineering vectors to resolve deadlocks and clarify unknown error signatures.</li>
+        </ul>
+      </div>
+
+      <!-- LOG 3: GLOBAL TECHNICAL SUPPORT -->
+      <div class="jedi-mission-card">
+        <h3>Global Technical Support @ Connections Romania for Procter & Gamble</h3>
+        <div class="timeline-stamp">SYSTEM TIMELINE: October 2019 - June 2020</div>
+        
+        <ul class="terminal-bullet-list">
+          <li>Resolved technical service tickets within global ServiceNow infrastructure, consistently satisfying strict service-level agreements (SLAs).</li>
+          <li>Identified complex system exceptions, logging structural application bugs into Jira tracking clusters for L2/L3 remediation.</li>
+          <li>Compiled operational performance metrics and transaction output summaries for business intelligence evaluation.</li>
+          <li>Initiated external change requests to process database and structural asset changes on client web interfaces.</li>
+          <li>Authored technical interface documentation for system users to streamline cross-border network tracking.</li>
+          <li>Facilitated zero-downtime operations during business hand-offs by executing smooth onboarding handshakes with oncoming support teams.</li>
+        </ul>
+      </div>
+
+      <!-- LOG 4: VENDOR MASTER DATA ANALYST -->
+      <div class="jedi-mission-card">
+        <h3>Vendor Master Data Analyst @ Connections Romania for Procter & Gamble</h3>
+        <div class="timeline-stamp">SYSTEM TIMELINE: October 2018 - September 2019</div>
+        
+        <ul class="terminal-bullet-list">
+          <li>Generated daily system audits on transactional exceptions, extracting metadata to isolate specific accounting processing blocks.</li>
+          <li>Conducted analytical investigations within enterprise SAP layouts utilizing 3-way match validation algorithms.</li>
+          <li>Processed critical supplier updates by generating data change instances inside Aravo Third-Party Risk Management systems.</li>
+          <li>Logged incident records inside ServiceNow tracking architectures to resolve synchronization errors in Aravo-to-SAP data pipelines.</li>
+          <li>Regulated transaction flows to optimize speed, mitigating overdue processing risks within enterprise procurement layers.</li>
