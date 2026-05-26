@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Experience | Claudia Chircu</title>
+  
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://googleapis.com" rel="stylesheet">
+
+  <style>
+    @import url('https://cdnfonts.com');
+
+    /* --- GLOWING JEDI WORK EXPERIENCE STYLES --- */
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      color: #E2E8F0;            /* Crisp Durasteel Gray */
+      background-color: #0D111A;   /* Deep Space Navy */
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Side Navigation Drawer */
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 100;            
+      top: 0;
+      left: 0;
+      background-color: #161F30;   /* Starship Control Panel dark blue */
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      border-right: 1px solid rgba(0, 210, 255, 0.3); /* Laser fence border */
+    }
+
+    .sidenav a {
+      padding: 12px 8px 12px 32px;
+      text-decoration: none;
+      font-size: 18px;
+      font-family: 'Share Tech Mono', monospace;
+      color: #E2E8F0;
+      display: block;
+      transition: 0.3s;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* Green lightsaber glow on hover */
+    .sidenav a:hover {
+      color: #39FF14; 
+      text-shadow: 0 0 8px #39FF14;
+      padding-left: 40px;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    /* Base Navigation Trigger Wrapper */
+    #main {
+      transition: margin-left .5s;
+      padding: 16px;
+      background-color: #0D111A;
+    }
+
+    .menu-trigger {
+      font-family: 'Star Jedi', sans-serif;
+      font-size: 22px;
+      cursor: pointer;
+      color: #00D2FF;             /* Skywalker Blue trigger */
+      text-shadow: 0 0 8px #00D2FF;
+      letter-spacing: 1px;
+    }
+
+    /* Custom Galactic Command Mission Card Panels */
+    .jedi-mission-card {
+      background-color: #161F30;
+      border: 1px solid rgba(0, 210, 255, 0.2);
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 35px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .jedi-mission-card:hover {
+      border-color: #00D2FF;
+      box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+    }
+
+    .jedi-mission-card h3 {
+      font-family: 'Share Tech Mono', monospace;
+      color: #39FF14;             /* Yoda Green highlights for role designations */
+      text-shadow: 0 0 4px #39FF14;
+      font-size: 19px;
+      margin: 0 0 8px 0;
+    }
+
+    .timeline-stamp {
+      font-size: 14px;
+      color: #00D2FF;
+      text-shadow: 0 0 2px rgba(0, 210, 255, 0.3);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    /* Terminal Action Tracker Lists */
+    .terminal-bullet-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .terminal-bullet-list li {
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 12px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* Adds a sleek sci-fi tracker arrow [>] in front of each bullet duty */
+    .terminal-bullet-list li::before {
+      content: ">";
+      position: absolute;
+      left: 0;
+      color: #00D2FF;
+      text-shadow: 0 0 4px #00D2FF;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Side Navigation Drawer Element -->
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="home.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="experience.html">Work Experience</a>
+    <a href="education.html">Education & Certifications</a>
+    <a href="skills.html">Skills</a>
+    <a href="hobbies.html">Hobbies</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Main View Area Workspace -->
+  <div id="main">
+    <span class="menu-trigger" onclick="openNav()">☰ Explore Portfolio</span>
+    
+    <!-- Central Content Area -->
+    <main class="content-wrap" style="padding-top: 40px; padding-bottom: 40px;">
+      
+      <h2 style="font-family: 'Star Jedi', sans-serif; font-weight: normal; color: #ffffff; text-shadow: 0 0 8px #00D2FF, 0 0 15px #00D2FF; text-align: center; margin-bottom: 15px; font-size: 28px; letter-spacing: 1px;">
+        Mission Logs
+      </h2>
+
+      <!-- Executive Overview Entry -->
+      <p style="text-align: center; max-width: 650px; margin: 0 auto 40px auto; line-height: 1.7; font-size: 16px; color: #E2E8F0;">
+        Experienced on customer support, good understanding of technical processes, concepts and methodologies with a fine touch of empathy.
+      </p>
+
+      <!-- LOG 1: TECHNICAL WRITER -->
+      <div class="jedi-mission-card">
+        <h3>Technical Writer @ _VOIS (Vodafone Intelligent Solutions)</h3>
+        <div class="timeline-stamp">SYSTEM TIMELINE: June 2021 - Present</div>
+        
+        <ul class="terminal-bullet-list">
+          <li>I create documentation for our customers, like User Guides, Quick Reference Guides to ensure a good procedural understanding of the product’s functionalities.</li>
+          <li>I update the documentation when a new version of the product is released.</li>
+          <li>I use specific tools to edit and build the documentation, like: MadCap Software, Word, PowerPoint.</li>
+          <li>I create and maintain the quality of the documentation in accordance to internal standards and requirements.</li>
+          <li>I involve in promoting the visibility across _VOIS by creating and updating SharePoint pages and widgets for the department's monthly newsletter.</li>
+        </ul>
+      </div>
+
+      <!-- LOG 2: ACCOUNTS PAYABLE BUSINESS SUPPORT -->
+      <div class="jedi-mission-card">
+        <h3>Accounts Payable Business Support Services L1 @ Connections Romania for Procter & Gamble</h3>
+        <div class="timeline-stamp">SYSTEM TIMELINE: July 2020 - June 2021</div>
+        
+        <ul class="terminal-bullet-list">
+          <li>As a Regional Administrator for an internal Accounts Payable application, I provide access to the users and escalate their issues to L2 for investigation.</li>
+          <li>I maintain databases in internal programs to ensure the information is displayed correctly for P2P daily tasks.</li>
+          <li>I perform manual testing for different Agile projects in the UAT phase - Regression testing (NNIT) to determine if other components have been affected by the new release.</li>
+          <li>I offer technical support for P2P Ops teams (FI approval workflow) in accordance to internal policies and processes.</li>
+          <li>I monitor the Electronic invoicing Dashboard to identify and proactively act to solve issues that prevent invoices to be processed in SAP.</li>
+          <li>I provide resolutions for invoice issues based on root cause analysis & escalate them to Front Office agents.</li>
+          <li>I investigate and document unknown errors & collaborate with 3rd party support teams in order to clarify the error code and avoid deadlocks.</li>
+        </ul>
+      </div>
+
+      <!-- LOG 3: GLOBAL TECHNICAL SUPPORT -->
+      <div class="jedi-mission-card">
+        <h3>Global Technical Support @ Connections Romania for Procter & Gamble</h3>
+        <div class="timeline-stamp">SYSTEM TIMELINE: October 2019 - June 2020</div>
+        
+        <ul class="terminal-bullet-list">
+          <li>As part of Technical Support Global Team, I solved most common issues in ServiceNow platform, according to the SLA agreements.</li>
+          <li>For more complex issues, I raised bugs to L2/L3 in JIRA for resolution.</li>
+          <li>Report and analyze completed work for business management review.</li>
+          <li>Created requests for a 3rd party in order to update the information on the company’s pages and portals.</li>
+          <li>I created & updated documentation for applications to ease navigation of the suppliers and internal users.</li>
+          <li>I helped with a smooth transition when a new team took over the technical support role.</li>
+        </ul>
+      </div>
+
+      <!-- LOG 4: VENDOR MASTER DATA ANALYST -->
+      <div class="jedi-mission-card">
+        <h3>Vendor Master Data Analyst @ Connections Romania for Procter & Gamble</h3>
+        <div class="timeline-stamp">SYSTEM TIMELINE: October 2018 - September 2019</div>
+        
+        <ul class="terminal-bullet-list">
+          <li>I ran daily reports for blocked invoices, providing analysis on block reason.</li>
+          <li>I performed SAP investigation about Vendor's details - 3 way-match.</li>
+          <li>I raises tickets in Aravo Third-Party Risk Management for Vendor Master Data updates.</li>
+          <li>I submitted incidents in Service Now Ticketing Tool for technical issues related to Aravo-SAP data flow or other technical errors.</li>
+          <li>I ensured that Vendor Master Data issues are solved in a timely manner in order to avoid invoices to become overdue.</li>
+          <li>I assisted Suppliers on the Vendor Master Data process and provide help for any issues they encounter.</li>
+          <li>I performed SAP investigation for PO’s and goods receipts in order to troubleshoot the blocked invoices.</li>
+          <li>I contacted support teams and follow-up on issues to solve the processes in time.</li>
+        </ul>
+      </div>
+
+    </main>
+  </div>
+<script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+    }
+  </script>
+
+</body>
+</html>
