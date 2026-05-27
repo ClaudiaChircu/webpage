@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Education & Certifications | Claudia Chircu</title>
+  <title>Development Log | Claudia Chircu</title>
   
   <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
   <link href="https://googleapis.com" rel="stylesheet">
 
   <style>
@@ -93,7 +93,7 @@
     .jedi-archive-section h2 {
       font-family: 'Star Jedi', sans-serif;
       color: #00D2FF;
-      text-shadow: 0 0 8px var(--jedi-blue-glow);
+      text-shadow: 0 0 8px #00D2FF;
       font-size: 22px;
       margin-top: 0;
       margin-bottom: 25px;
@@ -133,9 +133,13 @@
     .terminal-list li {
       position: relative;
       padding-left: 25px;
-      margin-bottom: 12px;
+      margin-bottom: 30px; /* Increased padding to balance groups of badges cleanly */
       font-size: 15px;
       line-height: 1.5;
+    }
+
+    .terminal-list li:last-child {
+      margin-bottom: 0;
     }
 
     /* Adds a sci-fi prompt arrow [>] in front of each certification item */
@@ -143,6 +147,7 @@
       content: ">";
       position: absolute;
       left: 0;
+      top: 2px;
       color: #00D2FF;
       text-shadow: 0 0 4px #00D2FF;
       font-weight: bold;
@@ -152,6 +157,44 @@
       color: #ffffff;
       font-weight: normal;
       text-shadow: 0 0 2px rgba(255,255,255,0.5);
+    }
+
+    /* Note display for specialized text tags */
+    .cert-note {
+      display: block;
+      font-size: 13px;
+      color: #a0aec0;
+      margin-top: 6px;
+      font-style: italic;
+    }
+
+    /* --- INTEGRATED BADGE STYLES FROM SKILLS.HTML --- */
+    .badge-container {
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 8px; 
+      margin-top: 10px;
+    }
+
+    .jedi-badge {
+      background: #0D111A; 
+      color: #39FF14;             /* Yoda Green skill text */
+      border: 1px solid rgba(57, 255, 20, 0.4); 
+      padding: 4px 10px; 
+      border-radius: 20px; 
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 12px; 
+      font-weight: bold;
+      text-shadow: 0 0 4px rgba(57, 255, 20, 0.4);
+      box-shadow: 0 0 6px rgba(57, 255, 20, 0.1);
+      transition: all 0.2s ease;
+    }
+
+    .jedi-badge:hover {
+      background: #39FF14;
+      color: #0D111A;
+      text-shadow: none;
+      box-shadow: 0 0 12px #39FF14;
     }
   </style>
 </head>
@@ -163,9 +206,8 @@
     <a href="home.html">Home</a>
     <a href="projects.html">Projects</a>
     <a href="experience.html">Work Experience</a>
-    <a href="education.html">Education & Certifications</a>
-    <a href="skills.html">Skills</a>
-       <a href="beyond_the_desk.html">Beyond the Outer Rim of the Desk</a>
+    <a href="education.html">Development Log</a>
+    <a href="beyond_the_desk.html">Beyond the Outer Rim of the Desk</a>
     <a href="contact.html">Contact</a>
   </div>
 
@@ -174,9 +216,107 @@
     <span class="menu-trigger" onclick="openNav()">.𖥔 ݁ ˖✶⋆.˚ Explore Portfolio</span>
     
     <!-- Central Content Area -->
-    <main class="content-wrap" style="padding-top: 40px; padding-bottom: 40px;">
+    <main class="content-wrap" style="padding-top: 40px; padding-bottom: 40px; max-width: 1000px; margin: 0 auto;">
       
-      <!-- SECTION 1: ACADEMIC CREDENTIALS -->
+      
+
+      <!-- SECTION 1: HOLOCRON DATA CERTIFICATIONS -->
+      <section class="jedi-archive-section">
+        <h2>Holocron Certifications</h2>
+        
+        <ul class="terminal-list">
+          <!-- 1. Software Testing -->
+          <li>
+            Udemy E-learning — <b>Software Testing</b>, February 2021
+            <div class="badge-container">
+              <span class="jedi-badge">Software Testing</span>
+              <span class="jedi-badge">Quality Assurance (QA)</span>
+              <span class="jedi-badge">Test Case Creation</span>
+              <span class="jedi-badge">Bug Reporting & Defect Tracking</span>
+              <span class="jedi-badge">Manual Testing</span>
+       
+              <span class="jedi-badge">JIRA</span>
+            </div>
+          </li>
+
+          <!-- 2. Cybersecurity -->
+          <li>
+            CISCO Network Academy — <b>Introduction to Cybersecurity</b>, February 2021
+            <div class="badge-container">
+              <span class="jedi-badge">Cybersecurity Fundamentals</span>
+              <span class="jedi-badge">Network Security</span>
+              <span class="jedi-badge">Security Awareness</span>
+              <span class="jedi-badge">Threat Identification</span>
+              <span class="jedi-badge">Data Protection Principles</span>
+              <span class="jedi-badge">Risk Management Basics</span>
+            </div>
+          </li>
+
+          <!-- 3. IoT -->
+          <li>
+            CISCO Network Academy — <b>Introduction to IoT</b>, February 2021
+            <div class="badge-container">
+              <span class="jedi-badge">Internet of Things (IoT)</span>
+              <span class="jedi-badge">Connected Devices & Sensors</span>
+              <span class="jedi-badge">Network Communication Basics</span>
+              <span class="jedi-badge">Smart Systems</span>
+              <span class="jedi-badge">IoT Architecture Fundamentals</span>
+            </div>
+          </li>
+
+          <!-- 4. MySQL -->
+          <li>
+            Udemy — <b>MySQL for Data Analytics and Business Intelligence</b>, April 2021
+            <div class="badge-container">
+              <span class="jedi-badge">MySQL</span>
+              <span class="jedi-badge">SQL Queries</span>
+              <span class="jedi-badge">Data Analytics</span>
+              <span class="jedi-badge">Database Management</span>
+              <span class="jedi-badge">Data Reporting</span>
+              <span class="jedi-badge">Business Intelligence Fundamentals</span>
+              <span class="jedi-badge">Data Filtering & Aggregation</span>
+            </div>
+          </li>
+
+          <!-- 5. SAFe 5 Practitioner -->
+          <li>
+            Scaled Agile — <b>SAFe 5 Practitioner</b>, December 2021
+            <div class="badge-container">
+              <span class="jedi-badge">Agile Methodologies</span>
+              <span class="jedi-badge">SAFe Framework</span>
+              <span class="jedi-badge">Scrum Practices</span>
+              <span class="jedi-badge">Sprint Planning</span>
+              <span class="jedi-badge">Team Collaboration</span>
+              <span class="jedi-badge">Agile Project Delivery</span>
+              <span class="jedi-badge">Continuous Improvement</span>
+              <span class="jedi-badge">JIRA</span>
+            </div>
+</li>
+            <!-- 6. _VOIS — Lean Six Sigma White Belt, February 2022 -->
+          <li>
+            Scaled Agile — <b>SAFe 5 Practitioner</b>, December 2021
+            <div class="badge-container">
+              <span class="jedi-badge">Lean Methodology</span>
+              <span class="jedi-badge">Process Improvement</span>
+              <span class="jedi-badge">Continuous Improvement</span>
+              <span class="jedi-badge">Problem Solving</span>
+              <span class="jedi-badge">Workflow Optimization</span>
+              <span class="jedi-badge">Quality Management</span>
+            </div>
+            </li>
+
+ <!-- 7. LinkedIn Learning — CSS Essential Training, August 2022 -->
+          <li>
+            Scaled Agile — <b>SAFe 5 Practitioner</b>, December 2021
+            <div class="badge-container">
+              <span class="jedi-badge">CSS</span>
+              <span class="jedi-badge">Web Styling</span>
+              <span class="jedi-badge">Responsive Design</span>
+              <span class="jedi-badge">Basic Front-End Development Fundamentals</span>
+              <span class="jedi-badge">HTML/CSS Integration</span>
+            </div>
+</li>
+<!-- SECTION 2: ACADEMIC CREDENTIALS -->
       <section class="jedi-archive-section">
         <h2>Jedi Academy Training</h2>
 
@@ -192,26 +332,7 @@
           <p>Social Work | Status: Valedictorian | Timeline: 2015 - 2018</p>
         </div>
       </section>
-
-      <!-- SECTION 2: HOLOCRON DATA CERTIFICATIONS -->
-      <section class="jedi-archive-section">
-        <h2>Holocron Certifications</h2>
-        
-        <ul class="terminal-list">
-          <li>Udemy E-learning - <b>Software Testing</b>, February 2021</li>
-          <li>CISCO Network Academy - <b>Introduction to Cybersecurity</b>, February 2021</li>
-          <li>CISCO Network Academy - <b>Introduction to IoT</b>, February 2021</li>
-          <li>Udemy E-learning - <b>MySQL for Data Analytics and Business Intelligence</b>, April 2021</li>
-          <li>Scaled Agile - <b>SAFe 5 Practitioner Certification</b>, December 2021</li>
-          <li>_VOIS - <b>LEAN Six Sigma White Belt Certification</b>, February 2022</li>
-          <li>LinkedIn Learning - <b>CSS Essential Training</b>, August 2022</li>
-        </ul>
-      </section>
-
-    </main>
-  </div>
-
-  <script>
+<script>
     function openNav() {
       document.getElementById("mySidenav").style.width = "250px";
       document.getElementById("main").style.marginLeft = "250px";
@@ -225,3 +346,4 @@
 
 </body>
 </html>
+             
